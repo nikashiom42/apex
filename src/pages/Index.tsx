@@ -215,12 +215,7 @@ const Index = () => {
                 transition={{ delay: index * 0.1, duration: 0.6 }}
                 className="bg-card p-8 rounded-2xl border border-border hover:shadow-xl hover:border-primary/50 transition-all duration-500 group hover:scale-105 cursor-pointer"
               >
-                <motion.div
-                  whileHover={{ rotate: 360, scale: 1.1 }}
-                  transition={{ duration: 0.6 }}
-                >
-                  <service.icon className="w-12 h-12 mb-6 text-foreground group-hover:text-primary transition-colors duration-300" strokeWidth={1.5} />
-                </motion.div>
+                <service.icon className="w-12 h-12 mb-6 text-foreground group-hover:text-primary transition-all duration-500 group-hover:scale-110" strokeWidth={1.5} />
                 <h3 className="text-2xl font-light mb-4 text-foreground group-hover:text-primary transition-colors duration-300">{service.title}</h3>
                 <p className="text-muted-foreground leading-relaxed">{service.description}</p>
               </motion.div>
@@ -270,13 +265,9 @@ const Index = () => {
                 className="flex gap-6 group cursor-pointer"
                 whileHover={{ x: 10 }}
               >
-                <motion.div 
-                  className="flex-shrink-0 w-12 h-12 rounded-full bg-foreground text-background flex items-center justify-center font-light text-lg group-hover:scale-110 group-hover:bg-primary transition-all duration-300"
-                  whileHover={{ rotate: 360 }}
-                  transition={{ duration: 0.6 }}
-                >
+                <div className="flex-shrink-0 w-12 h-12 rounded-full bg-foreground text-background flex items-center justify-center font-light text-lg group-hover:scale-110 group-hover:bg-primary transition-all duration-500">
                   {index + 1}
-                </motion.div>
+                </div>
                 <div>
                   <h3 className="text-2xl font-light mb-3 text-foreground group-hover:text-primary transition-colors duration-300">{benefit.title}</h3>
                   <p className="text-muted-foreground leading-relaxed">{benefit.description}</p>
@@ -318,12 +309,7 @@ const Index = () => {
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1, duration: 0.6 }}
               >
-                <motion.div
-                  whileHover={{ scale: 1.2, rotate: 360 }}
-                  transition={{ duration: 0.6 }}
-                >
-                  <contact.icon className="w-8 h-8 mx-auto mb-4 text-foreground group-hover:text-primary transition-colors duration-300" strokeWidth={1.5} />
-                </motion.div>
+                <contact.icon className="w-8 h-8 mx-auto mb-4 text-foreground group-hover:text-primary transition-all duration-500 group-hover:scale-110" strokeWidth={1.5} />
                 <div className="text-sm text-muted-foreground mb-2">{contact.label}</div>
                 <div className="text-foreground">{contact.value}</div>
               </motion.div>
