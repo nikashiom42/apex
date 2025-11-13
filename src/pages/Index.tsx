@@ -2,7 +2,6 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import { Scale, Users, FileText, Building, Award, Phone, Mail, MapPin } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import logo from "@/assets/logo.jpg";
-import heroBg from "@/assets/hero-bg.jpg";
 import officeImg from "@/assets/office.jpg";
 
 const fadeInUp = {
@@ -39,27 +38,18 @@ const Index = () => {
             whileHover={{ scale: 1.05 }}
             transition={{ type: "spring", stiffness: 400 }}
           />
-          <nav className="hidden md:flex items-center gap-8">
-            <a href="#about" className="text-sm font-medium text-foreground hover:text-primary transition-all duration-300 relative after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-primary after:transition-all after:duration-300 hover:after:w-full">About</a>
-            <a href="#services" className="text-sm font-medium text-foreground hover:text-primary transition-all duration-300 relative after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-primary after:transition-all after:duration-300 hover:after:w-full">Services</a>
-            <a href="#contact" className="text-sm font-medium text-foreground hover:text-primary transition-all duration-300 relative after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-primary after:transition-all after:duration-300 hover:after:w-full">Contact</a>
+            <nav className="hidden md:flex items-center gap-8">
+            <a href="#about" className="text-sm font-medium text-foreground hover:text-[hsl(var(--logo-gold))] transition-all duration-300 relative after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-[hsl(var(--logo-gold))] after:transition-all after:duration-300 hover:after:w-full">About</a>
+            <a href="#services" className="text-sm font-medium text-foreground hover:text-[hsl(var(--logo-gold))] transition-all duration-300 relative after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-[hsl(var(--logo-gold))] after:transition-all after:duration-300 hover:after:w-full">Services</a>
+            <a href="#contact" className="text-sm font-medium text-foreground hover:text-[hsl(var(--logo-gold))] transition-all duration-300 relative after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-[hsl(var(--logo-gold))] after:transition-all after:duration-300 hover:after:w-full">Contact</a>
           </nav>
         </div>
       </header>
 
       {/* Hero Section */}
       <section className="relative pt-32 pb-24 px-6 overflow-hidden">
-        <motion.div 
-          className="absolute inset-0 z-0"
-          style={{ y: heroY, opacity: heroOpacity }}
-        >
-          <div className="absolute inset-0 bg-gradient-to-b from-background/50 to-background z-10" />
-          <img 
-            src={heroBg} 
-            alt="Hero Background" 
-            className="w-full h-full object-cover opacity-20"
-          />
-        </motion.div>
+        <div className="absolute top-20 right-10 w-2 h-32 bg-[hsl(var(--logo-red))] opacity-20 rounded-full" />
+        <div className="absolute bottom-10 left-10 w-2 h-24 bg-[hsl(var(--logo-gold))] opacity-20 rounded-full" />
         <div className="container mx-auto max-w-6xl relative z-20">
           <motion.div
             initial={{ opacity: 0, y: 40 }}
@@ -74,7 +64,10 @@ const Index = () => {
               transition={{ duration: 1.2, ease: "easeOut", delay: 0.2 }}
             >
               Legal Excellence<br />
-              <span className="text-muted-foreground">Redefined</span>
+              <span className="text-muted-foreground relative">
+                Redefined
+                <span className="absolute -bottom-2 left-0 w-16 h-0.5 bg-[hsl(var(--logo-gold))]" />
+              </span>
             </motion.h1>
             <motion.p 
               className="text-xl text-muted-foreground max-w-2xl mx-auto mb-12 leading-relaxed"
