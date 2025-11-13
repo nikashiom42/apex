@@ -1,281 +1,263 @@
-import { useState, useEffect } from "react";
+import { motion } from "framer-motion";
+import { Scale, Users, FileText, Building, Award, Phone, Mail, MapPin } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Card } from "@/components/ui/card";
-import { Mail, Phone, MapPin, CheckCircle2, Scale, Users, Clock, Award, Shield, Briefcase } from "lucide-react";
 import logo from "@/assets/logo.jpg";
 
+const fadeInUp = {
+  initial: { opacity: 0, y: 60 },
+  whileInView: { opacity: 1, y: 0 },
+  viewport: { once: true, margin: "-100px" }
+};
+
+const staggerContainer = {
+  initial: {},
+  whileInView: {},
+  viewport: { once: true, margin: "-50px" }
+};
+
+const staggerItem = {
+  initial: { opacity: 0, y: 40 },
+  whileInView: { opacity: 1, y: 0 }
+};
+
 const Index = () => {
-  const [scrollY, setScrollY] = useState(0);
-
-  useEffect(() => {
-    const handleScroll = () => setScrollY(window.scrollY);
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
-
-  const services = [
-    "Drafting and analysis of contracts, agreements, and legal documents",
-    "Representation before state and private organizations",
-    "Organizing partners' meetings and drafting powers of attorney",
-    "Legal consultations and assistance",
-    "Civil and administrative court representation",
-    "Public procurement and tender support",
-    "Licenses and permits procedures",
-    "Accounts receivable recovery",
-    "Administrative complaints and proceedings",
-    "Trademark and trade name registration"
-  ];
-
-  const benefits = [
-    { icon: Shield, text: "Professional liability insurance (30,000 GEL)" },
-    { icon: Users, text: "Team of 5 lawyers and attorneys" },
-    { icon: Clock, text: "24/7 service availability" },
-    { icon: CheckCircle2, text: "3-month trial period" },
-    { icon: Award, text: "No additional fees for winning disputes" },
-    { icon: Briefcase, text: "Free consultations for employees" }
-  ];
-
-  const whyUs = [
-    "Served by 5 corporate lawyers and 5 attorneys simultaneously",
-    "Full responsibility for quality and accuracy",
-    "No paid or unpaid leave obligations",
-    "Simple service termination process",
-    "No fines or compensation required",
-    "Every issue reviewed by entire team",
-    "Significantly higher qualification level",
-    "Monthly service from 590 GEL (VAT included)",
-    "Handle any workload or complexity easily",
-    "All lawyers constantly informed about your matters"
-  ];
-
   return (
     <div className="min-h-screen bg-background">
       {/* Header */}
-      <header className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border transition-all duration-300">
-        <div className="container mx-auto px-6 py-4 flex justify-between items-center">
-          <img 
-            src={logo} 
-            alt="Giorgi Zarnadze Law Firm" 
-            className="h-12 transition-transform duration-300 hover:scale-105"
-          />
-          <Button 
-            variant="default"
-            className="bg-primary hover:bg-primary/90 text-primary-foreground transition-all duration-300 hover:shadow-lg"
-            onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
-          >
-            Contact Us
-          </Button>
+      <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border">
+        <div className="container mx-auto px-6 py-4 flex items-center justify-between">
+          <img src={logo} alt="Giorgi Zarnadze Law Firm" className="h-12 w-auto" />
+          <nav className="hidden md:flex items-center gap-8">
+            <a href="#about" className="text-sm font-medium text-foreground hover:text-primary transition-colors">About</a>
+            <a href="#services" className="text-sm font-medium text-foreground hover:text-primary transition-colors">Services</a>
+            <a href="#contact" className="text-sm font-medium text-foreground hover:text-primary transition-colors">Contact</a>
+          </nav>
         </div>
       </header>
 
       {/* Hero Section */}
-      <section 
-        className="relative min-h-screen flex items-center justify-center overflow-hidden"
-        style={{
-          background: 'linear-gradient(135deg, hsl(0 58% 28%) 0%, hsl(0 45% 35%) 100%)'
-        }}
-      >
-        <div 
-          className="absolute inset-0 opacity-10"
-          style={{
-            backgroundImage: 'radial-gradient(circle at 2px 2px, white 1px, transparent 0)',
-            backgroundSize: '40px 40px',
-            transform: `translateY(${scrollY * 0.5}px)`
-          }}
-        />
-        <div className="container mx-auto px-6 text-center relative z-10">
-          <div className="animate-fade-in">
-            <img 
-              src={logo} 
-              alt="Giorgi Zarnadze Law Firm" 
-              className="h-32 md:h-40 mx-auto mb-8"
-            />
-            <h1 className="text-4xl md:text-6xl font-bold text-primary-foreground mb-6">
-              Excellence in Legal Services
+      <section className="pt-32 pb-24 px-6">
+        <div className="container mx-auto max-w-6xl">
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, ease: "easeOut" }}
+            className="text-center"
+          >
+            <h1 className="text-6xl md:text-7xl lg:text-8xl font-light tracking-tight text-foreground mb-8">
+              Legal Excellence<br />
+              <span className="text-muted-foreground">Redefined</span>
             </h1>
-            <p className="text-xl md:text-2xl text-primary-foreground/90 mb-8 max-w-3xl mx-auto">
-              Serving Georgian businesses since 2010 with professional, accessible, and client-oriented legal solutions
+            <p className="text-xl text-muted-foreground max-w-2xl mx-auto mb-12 leading-relaxed">
+              Expert legal representation combining Georgian expertise with international standards
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in-delay">
-              <Button 
-                size="lg"
-                variant="secondary"
-                className="bg-accent text-accent-foreground hover:bg-accent/90 transition-all duration-300 hover:scale-105 hover:shadow-xl"
-                onClick={() => document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' })}
-              >
-                Learn More
-              </Button>
-              <Button 
-                size="lg"
-                variant="outline"
-                className="border-2 border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary transition-all duration-300 hover:scale-105"
-                onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
-              >
-                Get Started
-              </Button>
-            </div>
-          </div>
-        </div>
-        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
-          <div className="w-6 h-10 border-2 border-primary-foreground/50 rounded-full flex items-start justify-center p-2">
-            <div className="w-1 h-2 bg-primary-foreground/50 rounded-full" />
-          </div>
+            <Button size="lg" className="text-base px-8 py-6 rounded-full">
+              Schedule Consultation
+            </Button>
+          </motion.div>
         </div>
       </section>
 
       {/* About Section */}
-      <section id="about" className="py-24 bg-background">
-        <div className="container mx-auto px-6">
-          <div className="max-w-4xl mx-auto">
-            <div className="flex items-center justify-center mb-8 animate-slide-up">
-              <Scale className="w-12 h-12 text-primary mr-4" />
-              <h2 className="text-4xl font-bold text-foreground">About Us</h2>
+      <section id="about" className="py-24 px-6 bg-secondary">
+        <div className="container mx-auto max-w-6xl">
+          <motion.div {...fadeInUp} transition={{ duration: 0.8 }} className="grid md:grid-cols-2 gap-16 items-center">
+            <div>
+              <h2 className="text-5xl font-light tracking-tight text-foreground mb-6">
+                About Us
+              </h2>
+              <p className="text-lg text-muted-foreground leading-relaxed mb-6">
+                Giorgi Zarnadze Law Firm stands as a beacon of legal excellence in Georgia, seamlessly blending local expertise with international standards. Our commitment to delivering personalized, strategic legal solutions has earned us the trust of individuals and businesses alike.
+              </p>
+              <p className="text-lg text-muted-foreground leading-relaxed">
+                With a team of 5 experienced lawyers and 5 dedicated attorneys, we provide comprehensive legal services that address the diverse needs of our clients with precision and care.
+              </p>
             </div>
-            <Card className="p-8 md:p-12 shadow-lg border-border hover:shadow-xl transition-all duration-300 animate-scale-in">
-              <p className="text-lg text-foreground/80 leading-relaxed mb-6">
-                LTD Giorgi Zarnadze Legal Company has been operating on the Georgian market since 2010 and serves various private companies and legal entities. To date, our company has provided services to more than 5,000 legal entities.
-              </p>
-              <p className="text-lg text-foreground/80 leading-relaxed mb-6">
-                Our aim is to deliver service that is individualized, accessible, and client-oriented. Our company is represented by a team of highly qualified and experienced lawyers who offer a wide range of legal services to legal entities.
-              </p>
-              <p className="text-lg text-foreground/80 leading-relaxed">
-                Since 2021, we are proud members of the Georgian Chamber of Commerce and Industry, the Asia–Africa Chamber of Commerce and Industry, the Entrepreneurs' Association, and the Georgian Small and Medium Enterprises Association. We maintain strategic partnerships with the International Black Sea University and the University of Georgia, while sponsoring the European Law Students' Association and the International School of Intellect and Education.
-              </p>
-            </Card>
-          </div>
-        </div>
-      </section>
-
-      {/* Benefits Section */}
-      <section className="py-24 bg-muted">
-        <div className="container mx-auto px-6">
-          <h2 className="text-4xl font-bold text-center mb-16 text-foreground">What We Offer</h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            {benefits.map((benefit, index) => (
-              <Card 
-                key={index}
-                className="p-6 hover:shadow-lg transition-all duration-300 hover:-translate-y-1 border-border group cursor-pointer"
-                style={{ animationDelay: `${index * 100}ms` }}
-              >
-                <benefit.icon className="w-12 h-12 text-primary mb-4 transition-transform duration-300 group-hover:scale-110" />
-                <p className="text-foreground font-medium">{benefit.text}</p>
-              </Card>
-            ))}
-          </div>
+            <div className="grid grid-cols-2 gap-6">
+              <div className="bg-background p-8 rounded-2xl">
+                <div className="text-4xl font-light mb-2">10+</div>
+                <div className="text-sm text-muted-foreground">Years Experience</div>
+              </div>
+              <div className="bg-background p-8 rounded-2xl">
+                <div className="text-4xl font-light mb-2">500+</div>
+                <div className="text-sm text-muted-foreground">Cases Won</div>
+              </div>
+              <div className="bg-background p-8 rounded-2xl">
+                <div className="text-4xl font-light mb-2">10</div>
+                <div className="text-sm text-muted-foreground">Legal Experts</div>
+              </div>
+              <div className="bg-background p-8 rounded-2xl">
+                <div className="text-4xl font-light mb-2">98%</div>
+                <div className="text-sm text-muted-foreground">Success Rate</div>
+              </div>
+            </div>
+          </motion.div>
         </div>
       </section>
 
       {/* Services Section */}
-      <section className="py-24 bg-background">
-        <div className="container mx-auto px-6">
-          <h2 className="text-4xl font-bold text-center mb-16 text-foreground">Our Legal Services</h2>
-          <div className="max-w-4xl mx-auto grid md:grid-cols-2 gap-6">
-            {services.map((service, index) => (
-              <div 
-                key={index}
-                className="flex items-start space-x-3 p-4 rounded-lg hover:bg-muted transition-all duration-300 group cursor-pointer"
+      <section id="services" className="py-24 px-6">
+        <div className="container mx-auto max-w-6xl">
+          <motion.div {...fadeInUp} transition={{ duration: 0.8 }} className="text-center mb-20">
+            <h2 className="text-5xl font-light tracking-tight text-foreground mb-6">
+              Our Legal Services
+            </h2>
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+              Comprehensive legal solutions tailored to your unique needs
+            </p>
+          </motion.div>
+
+          <motion.div
+            variants={staggerContainer}
+            initial="initial"
+            whileInView="whileInView"
+            viewport={{ once: true, margin: "-100px" }}
+            className="grid md:grid-cols-3 gap-8"
+          >
+            {[
+              {
+                icon: Scale,
+                title: "Civil Law",
+                description: "Expert representation in civil disputes, contracts, and property matters with meticulous attention to detail."
+              },
+              {
+                icon: Building,
+                title: "Corporate Law",
+                description: "Strategic legal counsel for businesses, from formation to complex commercial transactions."
+              },
+              {
+                icon: FileText,
+                title: "Litigation",
+                description: "Aggressive courtroom advocacy protecting your rights with proven trial experience."
+              },
+              {
+                icon: Users,
+                title: "Family Law",
+                description: "Compassionate guidance through divorce, custody, and family legal matters."
+              },
+              {
+                icon: Award,
+                title: "Intellectual Property",
+                description: "Protecting your innovations, trademarks, and creative works with comprehensive IP services."
+              },
+              {
+                icon: FileText,
+                title: "Real Estate Law",
+                description: "Complete legal support for property transactions, disputes, and development projects."
+              }
+            ].map((service, index) => (
+              <motion.div
+                key={service.title}
+                variants={staggerItem}
+                transition={{ delay: index * 0.1, duration: 0.6 }}
+                className="bg-card p-8 rounded-2xl border border-border hover:shadow-lg transition-shadow"
               >
-                <CheckCircle2 className="w-6 h-6 text-primary flex-shrink-0 mt-1 transition-transform duration-300 group-hover:scale-110" />
-                <p className="text-foreground/80">{service}</p>
-              </div>
+                <service.icon className="w-12 h-12 mb-6 text-foreground" strokeWidth={1.5} />
+                <h3 className="text-2xl font-light mb-4 text-foreground">{service.title}</h3>
+                <p className="text-muted-foreground leading-relaxed">{service.description}</p>
+              </motion.div>
             ))}
-          </div>
+          </motion.div>
         </div>
       </section>
 
-      {/* Why Us Section */}
-      <section className="py-24 bg-muted">
-        <div className="container mx-auto px-6">
-          <h2 className="text-4xl font-bold text-center mb-16 text-foreground">Why Choose Us?</h2>
-          <div className="max-w-5xl mx-auto">
-            <div className="grid md:grid-cols-2 gap-6">
-              {whyUs.map((reason, index) => (
-                <Card 
-                  key={index}
-                  className="p-6 hover:shadow-lg transition-all duration-300 hover:-translate-y-1 border-l-4 border-l-primary"
-                >
-                  <p className="text-foreground flex items-start">
-                    <span className="text-accent font-bold mr-3 text-xl flex-shrink-0">{index + 1}.</span>
-                    <span>{reason}</span>
-                  </p>
-                </Card>
-              ))}
-            </div>
-            <Card className="mt-12 p-8 bg-primary text-primary-foreground shadow-xl">
-              <h3 className="text-2xl font-bold mb-4">Our Expertise</h3>
-              <p className="text-lg leading-relaxed">
-                We serve companies operating in various sectors including construction, distribution, insurance, manufacturing, medical, educational, transportation, and many other industries. Our extensive experience ensures we understand your specific business needs.
-              </p>
-            </Card>
-          </div>
+      {/* Why Choose Us Section */}
+      <section className="py-24 px-6 bg-secondary">
+        <div className="container mx-auto max-w-6xl">
+          <motion.div {...fadeInUp} transition={{ duration: 0.8 }} className="text-center mb-20">
+            <h2 className="text-5xl font-light tracking-tight text-foreground mb-6">
+              Why Choose Us
+            </h2>
+          </motion.div>
+
+          <motion.div
+            variants={staggerContainer}
+            initial="initial"
+            whileInView="whileInView"
+            viewport={{ once: true, margin: "-100px" }}
+            className="grid md:grid-cols-2 gap-12"
+          >
+            {[
+              {
+                title: "Local Expertise, Global Standards",
+                description: "Deep understanding of Georgian law combined with international best practices."
+              },
+              {
+                title: "Client-Centered Approach",
+                description: "Personalized strategies focused on your specific goals and circumstances."
+              },
+              {
+                title: "Proven Track Record",
+                description: "Consistent success across diverse legal matters with measurable results."
+              },
+              {
+                title: "Comprehensive Services",
+                description: "Full-spectrum legal support from initial consultation to final resolution."
+              }
+            ].map((benefit, index) => (
+              <motion.div
+                key={benefit.title}
+                variants={staggerItem}
+                transition={{ delay: index * 0.1, duration: 0.6 }}
+                className="flex gap-6"
+              >
+                <div className="flex-shrink-0 w-12 h-12 rounded-full bg-foreground text-background flex items-center justify-center font-light text-lg">
+                  {index + 1}
+                </div>
+                <div>
+                  <h3 className="text-2xl font-light mb-3 text-foreground">{benefit.title}</h3>
+                  <p className="text-muted-foreground leading-relaxed">{benefit.description}</p>
+                </div>
+              </motion.div>
+            ))}
+          </motion.div>
         </div>
       </section>
 
       {/* Contact Section */}
-      <section 
-        id="contact" 
-        className="py-24 bg-background relative overflow-hidden"
-      >
-        <div 
-          className="absolute inset-0 opacity-5"
-          style={{
-            backgroundImage: 'radial-gradient(circle at 2px 2px, hsl(0 58% 28%) 1px, transparent 0)',
-            backgroundSize: '40px 40px'
-          }}
-        />
-        <div className="container mx-auto px-6 relative z-10">
-          <h2 className="text-4xl font-bold text-center mb-16 text-foreground">Get In Touch</h2>
-          <Card className="max-w-2xl mx-auto p-8 md:p-12 shadow-xl border-border">
-            <div className="space-y-8">
-              <div className="flex items-start space-x-4 group cursor-pointer hover:translate-x-2 transition-transform duration-300">
-                <Mail className="w-6 h-6 text-primary flex-shrink-0 mt-1" />
-                <div>
-                  <h3 className="font-semibold text-foreground mb-1">Email</h3>
-                  <a href="mailto:info@zarnadzelawfirm.ge" className="text-muted-foreground hover:text-primary transition-colors">
-                    info@zarnadzelawfirm.ge
-                  </a>
-                </div>
-              </div>
-              <div className="flex items-start space-x-4 group cursor-pointer hover:translate-x-2 transition-transform duration-300">
-                <Phone className="w-6 h-6 text-primary flex-shrink-0 mt-1" />
-                <div>
-                  <h3 className="font-semibold text-foreground mb-1">Phone</h3>
-                  <a href="tel:+995XXXXXXXXX" className="text-muted-foreground hover:text-primary transition-colors">
-                    +995 XXX XXX XXX
-                  </a>
-                </div>
-              </div>
-              <div className="flex items-start space-x-4 group cursor-pointer hover:translate-x-2 transition-transform duration-300">
-                <MapPin className="w-6 h-6 text-primary flex-shrink-0 mt-1" />
-                <div>
-                  <h3 className="font-semibold text-foreground mb-1">Location</h3>
-                  <p className="text-muted-foreground">Tbilisi, Georgia</p>
-                </div>
-              </div>
-              <div className="pt-8 border-t border-border">
-                <Button 
-                  size="lg"
-                  className="w-full bg-primary hover:bg-primary/90 text-primary-foreground transition-all duration-300 hover:shadow-lg hover:scale-105"
-                >
-                  Schedule a Consultation
-                </Button>
-              </div>
+      <section id="contact" className="py-24 px-6">
+        <div className="container mx-auto max-w-4xl">
+          <motion.div {...fadeInUp} transition={{ duration: 0.8 }} className="text-center mb-16">
+            <h2 className="text-5xl font-light tracking-tight text-foreground mb-6">
+              Get in Touch
+            </h2>
+            <p className="text-lg text-muted-foreground">
+              Schedule a consultation with our legal experts
+            </p>
+          </motion.div>
+
+          <motion.div
+            {...fadeInUp}
+            transition={{ duration: 0.8 }}
+            className="grid md:grid-cols-3 gap-8"
+          >
+            <div className="text-center p-8 bg-secondary rounded-2xl">
+              <Phone className="w-8 h-8 mx-auto mb-4 text-foreground" strokeWidth={1.5} />
+              <div className="text-sm text-muted-foreground mb-2">Phone</div>
+              <div className="text-foreground">+995 XXX XXX XXX</div>
             </div>
-          </Card>
+            <div className="text-center p-8 bg-secondary rounded-2xl">
+              <Mail className="w-8 h-8 mx-auto mb-4 text-foreground" strokeWidth={1.5} />
+              <div className="text-sm text-muted-foreground mb-2">Email</div>
+              <div className="text-foreground">info@gzlawfirm.ge</div>
+            </div>
+            <div className="text-center p-8 bg-secondary rounded-2xl">
+              <MapPin className="w-8 h-8 mx-auto mb-4 text-foreground" strokeWidth={1.5} />
+              <div className="text-sm text-muted-foreground mb-2">Address</div>
+              <div className="text-foreground">Tbilisi, Georgia</div>
+            </div>
+          </motion.div>
         </div>
       </section>
 
       {/* Footer */}
-      <footer className="bg-primary text-primary-foreground py-12">
-        <div className="container mx-auto px-6">
-          <div className="flex flex-col md:flex-row justify-between items-center">
-            <div className="mb-4 md:mb-0">
-              <img src={logo} alt="Giorgi Zarnadze Law Firm" className="h-16 opacity-90" />
-            </div>
-            <div className="text-center md:text-right">
-              <p className="text-primary-foreground/80 mb-2">© 2024 Giorgi Zarnadze Law Firm. All rights reserved.</p>
-              <p className="text-primary-foreground/60 text-sm">Serving Georgian businesses since 2010</p>
-            </div>
+      <footer className="py-12 px-6 border-t border-border">
+        <div className="container mx-auto max-w-6xl">
+          <div className="flex flex-col md:flex-row items-center justify-between gap-6">
+            <img src={logo} alt="Giorgi Zarnadze Law Firm" className="h-10 w-auto" />
+            <p className="text-sm text-muted-foreground">
+              © 2024 Giorgi Zarnadze Law Firm. All rights reserved.
+            </p>
           </div>
         </div>
       </footer>
