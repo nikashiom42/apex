@@ -34,7 +34,7 @@ const Index = () => {
           <motion.img 
             src={logo} 
             alt="Giorgi Zarnadze Law Firm" 
-            className="h-16 w-auto"
+            className="h-24 w-auto"
             whileHover={{ scale: 1.05 }}
             transition={{ type: "spring", stiffness: 400 }}
           />
@@ -340,7 +340,7 @@ const Index = () => {
       <footer className="py-12 px-6 border-t border-border">
         <div className="container mx-auto max-w-6xl">
           <div className="flex flex-col md:flex-row items-center justify-between gap-6">
-            <img src={logo} alt="Giorgi Zarnadze Law Firm" className="h-14 w-auto" />
+            <img src={logo} alt="Giorgi Zarnadze Law Firm" className="h-20 w-auto" />
             <p className="text-sm text-muted-foreground">
               © 2024 Giorgi Zarnadze Law Firm. All rights reserved.
             </p>
