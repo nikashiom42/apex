@@ -85,6 +85,7 @@ const Index = () => {
               <Button 
                 size="lg" 
                 className="text-base px-8 py-6 rounded-full hover:scale-105 transition-transform duration-300 shadow-lg hover:shadow-xl"
+                onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
               >
                 Schedule Consultation
               </Button>
