@@ -48,8 +48,8 @@ const Index = () => {
 
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 px-6 overflow-hidden">
-        <div className="absolute top-20 right-10 w-2 h-32 bg-[hsl(var(--logo-red))] opacity-20 rounded-full" />
-        <div className="absolute bottom-10 left-10 w-2 h-24 bg-[hsl(var(--logo-gold))] opacity-20 rounded-full" />
+         <div className="absolute top-20 right-10 w-2 h-32 bg-[hsl(var(--logo-red))] opacity-60 rounded-full" />
+        <div className="absolute bottom-10 left-10 w-2 h-24 bg-[hsl(var(--logo-gold))] opacity-60 rounded-full" />
         <div className="container mx-auto max-w-6xl relative z-20">
           <motion.div
             initial={{ opacity: 0, y: 40 }}
@@ -66,11 +66,11 @@ const Index = () => {
               Professional Legal<br />
               <span className="text-muted-foreground relative">
                 Services
-                <span className="absolute -bottom-2 left-0 w-16 h-0.5 bg-[hsl(var(--logo-gold))]" />
+                <span className="absolute -bottom-2 left-1/2 -translate-x-1/2 w-full h-0.5 bg-[hsl(var(--logo-gold))]" />
               </span>
             </motion.h1>
             <motion.p 
-              className="text-lg text-muted-foreground max-w-2xl mx-auto mb-12 leading-relaxed"
+              className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto mb-12 leading-relaxed"
               initial={{ opacity: 0, y: 40 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1, ease: "easeOut", delay: 0.4 }}
