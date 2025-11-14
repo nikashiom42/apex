@@ -247,7 +247,7 @@ const Index = () => {
             initial="initial"
             whileInView="whileInView"
             viewport={{ once: true, margin: "-100px" }}
-            className="grid md:grid-cols-2 lg:grid-cols-3 gap-12"
+            className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
           >
             {[
               {
@@ -279,15 +279,15 @@ const Index = () => {
                 key={benefit.title}
                 variants={staggerItem}
                 transition={{ delay: index * 0.1, duration: 0.6 }}
-                className="flex gap-6 group cursor-pointer"
-                whileHover={{ x: 10 }}
+                className="flex flex-col group cursor-pointer bg-card p-6 rounded-2xl border border-border hover:shadow-lg hover:border-primary/50 transition-all duration-500 h-full"
+                whileHover={{ y: -5 }}
               >
-                <div className="flex-shrink-0 w-12 h-12 rounded-full bg-foreground text-background flex items-center justify-center font-light text-lg group-hover:scale-110 group-hover:bg-primary transition-all duration-500">
+                <div className="flex-shrink-0 w-12 h-12 rounded-full bg-foreground text-background flex items-center justify-center font-light text-lg group-hover:scale-110 group-hover:bg-primary transition-all duration-500 mb-4">
                   {index + 1}
                 </div>
                 <div>
-                  <h3 className="text-2xl font-light mb-3 text-foreground group-hover:text-primary transition-colors duration-300">{benefit.title}</h3>
-                  <p className="text-muted-foreground leading-relaxed">{benefit.description}</p>
+                  <h3 className="text-xl font-light mb-3 text-foreground group-hover:text-primary transition-colors duration-300">{benefit.title}</h3>
+                  <p className="text-muted-foreground leading-relaxed text-sm">{benefit.description}</p>
                 </div>
               </motion.div>
             ))}
