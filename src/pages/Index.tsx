@@ -34,7 +34,7 @@ const Index = () => {
           <motion.img 
             src={logo} 
             alt="Giorgi Zarnadze Law Firm" 
-            className="h-24 w-auto"
+            className="h-16 w-auto"
             whileHover={{ scale: 1.05 }}
             transition={{ type: "spring", stiffness: 400 }}
           />
