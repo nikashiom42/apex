@@ -47,7 +47,7 @@ const Index = () => {
       </header>
 
       {/* Hero Section */}
-      <section className="relative pt-32 pb-24 px-6 overflow-hidden">
+      <section className="relative pt-32 pb-20 px-6 overflow-hidden">
         <div className="absolute top-20 right-10 w-2 h-32 bg-[hsl(var(--logo-red))] opacity-20 rounded-full" />
         <div className="absolute bottom-10 left-10 w-2 h-24 bg-[hsl(var(--logo-gold))] opacity-20 rounded-full" />
         <div className="container mx-auto max-w-6xl relative z-20">
@@ -58,7 +58,7 @@ const Index = () => {
             className="text-center"
           >
             <motion.h1 
-              className="text-6xl md:text-7xl lg:text-8xl font-light tracking-tight text-foreground mb-8"
+              className="text-5xl md:text-6xl lg:text-7xl font-light tracking-tight text-foreground mb-8"
               initial={{ opacity: 0, y: 60 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1.2, ease: "easeOut", delay: 0.2 }}
@@ -70,7 +70,7 @@ const Index = () => {
               </span>
             </motion.h1>
             <motion.p 
-              className="text-xl text-muted-foreground max-w-2xl mx-auto mb-12 leading-relaxed"
+              className="text-lg text-muted-foreground max-w-2xl mx-auto mb-12 leading-relaxed"
               initial={{ opacity: 0, y: 40 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1, ease: "easeOut", delay: 0.4 }}
@@ -94,12 +94,12 @@ const Index = () => {
       </section>
 
       {/* About Section */}
-      <section id="about" className="py-24 px-6 bg-secondary relative overflow-hidden">
+      <section id="about" className="py-20 px-6 bg-secondary relative overflow-hidden">
         <div className="container mx-auto max-w-6xl relative z-10">
-          <motion.div {...fadeInUp} transition={{ duration: 0.8 }} className="grid md:grid-cols-2 gap-16 items-center">
-            <div>
+          <motion.div {...fadeInUp} transition={{ duration: 0.8 }} className="grid md:grid-cols-2 gap-12 items-start">
+            <div className="space-y-4">
               <motion.h2 
-                className="text-5xl font-light tracking-tight text-foreground mb-6"
+                className="text-4xl font-light tracking-tight text-foreground mb-6"
                 initial={{ opacity: 0, x: -40 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
@@ -108,7 +108,7 @@ const Index = () => {
                 About Us
               </motion.h2>
               <motion.p 
-                className="text-lg text-muted-foreground leading-relaxed mb-6"
+                className="text-base text-muted-foreground leading-relaxed"
                 initial={{ opacity: 0, x: -40 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
@@ -117,7 +117,7 @@ const Index = () => {
                 LTD Giorgi Zarnadze Legal Company has been operating on the Georgian market since 2010 and serves various private companies and legal entities. To date, our company has provided services to more than 5,000 legal entities. Our aim is to deliver service that is individualized, accessible, and client-oriented.
               </motion.p>
               <motion.p 
-                className="text-lg text-muted-foreground leading-relaxed mb-6"
+                className="text-base text-muted-foreground leading-relaxed"
                 initial={{ opacity: 0, x: -40 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
@@ -126,7 +126,7 @@ const Index = () => {
                 Our company is represented by a team of highly qualified and experienced lawyers who offer a wide range of legal services to legal entities.
               </motion.p>
               <motion.p 
-                className="text-lg text-muted-foreground leading-relaxed mb-6"
+                className="text-base text-muted-foreground leading-relaxed"
                 initial={{ opacity: 0, x: -40 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
@@ -135,7 +135,7 @@ const Index = () => {
                 The professionalism and individual approach of our lawyers and attorneys ensure the success of our clients. We value our clients' time and are ready to offer service that is results-oriented and tailored to their needs. Since 2021, Giorgi Zarnadze Legal Company has been a member of the Georgian Chamber of Commerce and Industry, as well as the Asia–Africa Chamber of Commerce and Industry. Since 2021, our company has also been a member of the Entrepreneurs' Association and the Georgian Small and Medium Enterprises Association. Since 2020, Giorgi Zarnadze Legal Company has been a partner of the International Black Sea University and the University of Georgia. Giorgi Zarnadze Legal Company is a sponsor of the European Law Students' Association and also a sponsor of the International School of Intellect and Education.
               </motion.p>
             </div>
-            <div className="grid grid-cols-2 gap-6">
+            <div className="grid grid-cols-2 gap-4">
               {[
                 { value: "14+", label: "Years Experience", delay: 0 },
                 { value: "5000+", label: "Clients Served", delay: 0.1 },
@@ -144,14 +144,14 @@ const Index = () => {
               ].map((stat) => (
                 <motion.div 
                   key={stat.label}
-                  className="bg-background p-8 rounded-2xl hover:shadow-lg transition-all duration-300 hover:scale-105 group cursor-pointer"
+                  className="bg-background p-6 rounded-xl hover:shadow-lg transition-all duration-300 hover:scale-105 group cursor-pointer"
                   initial={{ opacity: 0, y: 40 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.6, delay: stat.delay }}
                   whileHover={{ y: -5 }}
                 >
-                  <div className="text-4xl font-light mb-2 group-hover:text-primary transition-colors duration-300">{stat.value}</div>
+                  <div className="text-3xl font-light mb-2 group-hover:text-primary transition-colors duration-300">{stat.value}</div>
                   <div className="text-sm text-muted-foreground">{stat.label}</div>
                 </motion.div>
               ))}
@@ -168,13 +168,13 @@ const Index = () => {
       </section>
 
       {/* Services Section */}
-      <section id="services" className="py-24 px-6">
+      <section id="services" className="py-20 px-6">
         <div className="container mx-auto max-w-6xl">
-          <motion.div {...fadeInUp} transition={{ duration: 0.8 }} className="text-center mb-20">
-            <h2 className="text-5xl font-light tracking-tight text-foreground mb-6">
+          <motion.div {...fadeInUp} transition={{ duration: 0.8 }} className="text-center mb-16">
+            <h2 className="text-4xl font-light tracking-tight text-foreground mb-6">
               Our Legal Services
             </h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+            <p className="text-base text-muted-foreground max-w-2xl mx-auto">
               Comprehensive legal solutions tailored to your unique needs
             </p>
           </motion.div>
@@ -225,8 +225,8 @@ const Index = () => {
                 className="bg-card p-8 rounded-2xl border border-border hover:shadow-xl hover:border-primary/50 transition-all duration-500 group hover:scale-105 cursor-pointer"
               >
                 <service.icon className="w-12 h-12 mb-6 text-foreground group-hover:text-primary transition-all duration-500 group-hover:scale-110" strokeWidth={1.5} />
-                <h3 className="text-2xl font-light mb-4 text-foreground group-hover:text-primary transition-colors duration-300">{service.title}</h3>
-                <p className="text-muted-foreground leading-relaxed">{service.description}</p>
+                <h3 className="text-xl font-light mb-4 text-foreground group-hover:text-primary transition-colors duration-300">{service.title}</h3>
+                <p className="text-sm text-muted-foreground leading-relaxed">{service.description}</p>
               </motion.div>
             ))}
           </motion.div>
@@ -234,10 +234,10 @@ const Index = () => {
       </section>
 
       {/* Why Choose Us Section */}
-      <section className="py-24 px-6 bg-secondary">
+      <section className="py-20 px-6 bg-secondary">
         <div className="container mx-auto max-w-6xl">
-          <motion.div {...fadeInUp} transition={{ duration: 0.8 }} className="text-center mb-20">
-            <h2 className="text-5xl font-light tracking-tight text-foreground mb-6">
+          <motion.div {...fadeInUp} transition={{ duration: 0.8 }} className="text-center mb-16">
+            <h2 className="text-4xl font-light tracking-tight text-foreground mb-6">
               Why Choose Us
             </h2>
           </motion.div>
@@ -296,13 +296,13 @@ const Index = () => {
       </section>
 
       {/* Contact Section */}
-      <section id="contact" className="py-24 px-6">
+      <section id="contact" className="py-20 px-6">
         <div className="container mx-auto max-w-4xl">
-          <motion.div {...fadeInUp} transition={{ duration: 0.8 }} className="text-center mb-16">
-            <h2 className="text-5xl font-light tracking-tight text-foreground mb-6">
+          <motion.div {...fadeInUp} transition={{ duration: 0.8 }} className="text-center mb-12">
+            <h2 className="text-4xl font-light tracking-tight text-foreground mb-6">
               Get in Touch
             </h2>
-            <p className="text-lg text-muted-foreground">
+            <p className="text-base text-muted-foreground">
               Schedule a consultation with our legal experts
             </p>
           </motion.div>
