@@ -55,41 +55,58 @@ const Index = () => {
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, ease: "easeOut" }}
-            className="text-center"
+            className="grid md:grid-cols-2 gap-12 items-center"
           >
-            <motion.h1 
-              className="text-5xl md:text-6xl lg:text-7xl font-light tracking-tight text-foreground mb-8"
-              initial={{ opacity: 0, y: 60 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 1.2, ease: "easeOut", delay: 0.2 }}
-            >
-              Professional Legal<br />
-              <span className="text-muted-foreground relative">
-                Services
-                <span className="absolute -bottom-2 left-1/2 -translate-x-1/2 w-full h-0.5 bg-[hsl(var(--logo-gold))]" />
-              </span>
-            </motion.h1>
-            <motion.p 
-              className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto mb-12 leading-relaxed"
-              initial={{ opacity: 0, y: 40 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 1, ease: "easeOut", delay: 0.4 }}
-            >
-              Individualized, accessible, and client-oriented legal solutions since 2010
-            </motion.p>
+            {/* Logo on the left */}
             <motion.div
-              initial={{ opacity: 0, scale: 0.9 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.8, ease: "easeOut", delay: 0.6 }}
+              initial={{ opacity: 0, x: -60 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 1.2, ease: "easeOut" }}
+              className="flex justify-center md:justify-start"
             >
-              <Button 
-                size="lg" 
-                className="text-base px-8 py-6 rounded-full hover:scale-105 transition-transform duration-300 shadow-lg hover:shadow-xl"
-                onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
-              >
-                Schedule Consultation
-              </Button>
+              <img 
+                src={logo} 
+                alt="Giorgi Zarnadze Law Firm" 
+                className="w-full max-w-md h-auto"
+              />
             </motion.div>
+
+            {/* Text content on the right */}
+            <div className="text-center md:text-left">
+              <motion.h1 
+                className="text-4xl md:text-5xl lg:text-6xl font-light tracking-tight text-foreground mb-6"
+                initial={{ opacity: 0, y: 60 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 1.2, ease: "easeOut", delay: 0.2 }}
+              >
+                Professional Legal<br />
+                <span className="text-muted-foreground relative inline-block">
+                  Services
+                  <span className="absolute -bottom-2 left-0 w-full h-0.5 bg-[hsl(var(--logo-gold))]" />
+                </span>
+              </motion.h1>
+              <motion.p 
+                className="text-lg md:text-xl text-muted-foreground mb-8 leading-relaxed"
+                initial={{ opacity: 0, y: 40 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 1, ease: "easeOut", delay: 0.4 }}
+              >
+                Individualized, accessible, and client-oriented legal solutions since 2010
+              </motion.p>
+              <motion.div
+                initial={{ opacity: 0, scale: 0.9 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.8, ease: "easeOut", delay: 0.6 }}
+              >
+                <Button 
+                  size="lg" 
+                  className="text-base px-8 py-6 rounded-full hover:scale-105 transition-transform duration-300 shadow-lg hover:shadow-xl"
+                  onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
+                >
+                  Schedule Consultation
+                </Button>
+              </motion.div>
+            </div>
           </motion.div>
         </div>
       </section>
