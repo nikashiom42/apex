@@ -1,8 +1,8 @@
 import { motion, useScroll, useTransform } from "framer-motion";
 import { Scale, Users, FileText, Building, Award, Phone, Mail, MapPin } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import logo from "@/assets/logo.jpg";
-import officeImg from "@/assets/office.jpg";
+import logo from "@/assets/logo.webp";
+import officeImg from "@/assets/office.webp";
 
 const fadeInUp = {
   initial: { opacity: 0, y: 60 },
@@ -30,7 +30,7 @@ const Index = () => {
     <div className="min-h-screen bg-background overflow-x-hidden">
       {/* Header */}
       <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border transition-all duration-300">
-        <div className="container mx-auto px-6 py-4 flex items-center justify-between">
+        <div className="container mx-auto px-6 py-2 flex items-center justify-between">
           <motion.img 
             src={logo} 
             alt="Giorgi Zarnadze Law Firm" 
