@@ -63,9 +63,9 @@ const Index = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1.2, ease: "easeOut", delay: 0.2 }}
             >
-              Legal Excellence<br />
+              Professional Legal<br />
               <span className="text-muted-foreground relative">
-                Redefined
+                Services
                 <span className="absolute -bottom-2 left-0 w-16 h-0.5 bg-[hsl(var(--logo-gold))]" />
               </span>
             </motion.h1>
@@ -75,7 +75,7 @@ const Index = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1, ease: "easeOut", delay: 0.4 }}
             >
-              Expert legal representation combining Georgian expertise with international standards
+              Individualized, accessible, and client-oriented legal solutions since 2010
             </motion.p>
             <motion.div
               initial={{ opacity: 0, scale: 0.9 }}
@@ -114,24 +114,33 @@ const Index = () => {
                 viewport={{ once: true }}
                 transition={{ duration: 0.8, delay: 0.2 }}
               >
-                Giorgi Zarnadze Law Firm stands as a beacon of legal excellence in Georgia, seamlessly blending local expertise with international standards. Our commitment to delivering personalized, strategic legal solutions has earned us the trust of individuals and businesses alike.
+                LTD Giorgi Zarnadze Legal Company has been operating on the Georgian market since 2010 and serves various private companies and legal entities. To date, our company has provided services to more than 5,000 legal entities. Our aim is to deliver service that is individualized, accessible, and client-oriented.
+              </motion.p>
+              <motion.p 
+                className="text-lg text-muted-foreground leading-relaxed mb-6"
+                initial={{ opacity: 0, x: -40 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.8, delay: 0.3 }}
+              >
+                Our company is represented by a team of highly qualified and experienced lawyers who offer a wide range of legal services to legal entities. The professionalism and individual approach of our lawyers and attorneys ensure the success of our clients.
               </motion.p>
               <motion.p 
                 className="text-lg text-muted-foreground leading-relaxed"
                 initial={{ opacity: 0, x: -40 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.8, delay: 0.3 }}
+                transition={{ duration: 0.8, delay: 0.4 }}
               >
-                With a team of 5 experienced lawyers and 5 dedicated attorneys, we provide comprehensive legal services that address the diverse needs of our clients with precision and care.
+                Since 2021, we have been a member of the Georgian Chamber of Commerce and Industry, the Asia–Africa Chamber of Commerce and Industry, the Entrepreneurs' Association, and the Georgian Small and Medium Enterprises Association. We are also proud partners of the International Black Sea University and the University of Georgia, and sponsors of the European Law Students' Association.
               </motion.p>
             </div>
             <div className="grid grid-cols-2 gap-6">
               {[
-                { value: "10+", label: "Years Experience", delay: 0 },
-                { value: "500+", label: "Cases Won", delay: 0.1 },
+                { value: "14+", label: "Years Experience", delay: 0 },
+                { value: "5000+", label: "Clients Served", delay: 0.1 },
                 { value: "10", label: "Legal Experts", delay: 0.2 },
-                { value: "98%", label: "Success Rate", delay: 0.3 }
+                { value: "24/7", label: "Availability", delay: 0.3 }
               ].map((stat) => (
                 <motion.div 
                   key={stat.label}
@@ -179,34 +188,34 @@ const Index = () => {
           >
             {[
               {
-                icon: Scale,
-                title: "Civil Law",
-                description: "Expert representation in civil disputes, contracts, and property matters with meticulous attention to detail."
+                icon: FileText,
+                title: "Contract & Document Drafting",
+                description: "Comprehensive drafting and analysis of contracts, agreements, charters, regulations, and all legal documentation."
               },
               {
                 icon: Building,
-                title: "Corporate Law",
-                description: "Strategic legal counsel for businesses, from formation to complex commercial transactions."
+                title: "Corporate Legal Services",
+                description: "Full corporate support including partners' meetings, powers of attorney, and legal consultations for management and employees."
               },
               {
-                icon: FileText,
-                title: "Litigation",
-                description: "Aggressive courtroom advocacy protecting your rights with proven trial experience."
+                icon: Scale,
+                title: "Court Representation",
+                description: "Filing civil and administrative claims with full legal representation until case completion. No additional fees for winning cases."
               },
               {
                 icon: Users,
-                title: "Family Law",
-                description: "Compassionate guidance through divorce, custody, and family legal matters."
+                title: "Legal Representation",
+                description: "Representation before the National Enforcement Bureau, Public Service Hall, and various state and private organizations."
               },
               {
                 icon: Award,
                 title: "Intellectual Property",
-                description: "Protecting your innovations, trademarks, and creative works with comprehensive IP services."
+                description: "Registration and patenting of trademarks and trade names at the National Intellectual Property Center."
               },
               {
                 icon: FileText,
-                title: "Real Estate Law",
-                description: "Complete legal support for property transactions, disputes, and development projects."
+                title: "Specialized Services",
+                description: "Public procurement support, licenses and permits, debt recovery, and administrative proceedings."
               }
             ].map((service, index) => (
               <motion.div
@@ -238,24 +247,32 @@ const Index = () => {
             initial="initial"
             whileInView="whileInView"
             viewport={{ once: true, margin: "-100px" }}
-            className="grid md:grid-cols-2 gap-12"
+            className="grid md:grid-cols-2 lg:grid-cols-3 gap-12"
           >
             {[
               {
-                title: "Local Expertise, Global Standards",
-                description: "Deep understanding of Georgian law combined with international best practices."
+                title: "Full Team at Your Service",
+                description: "You are served by 5 corporate lawyers and 5 attorneys simultaneously. Our entire team reviews every issue you face."
               },
               {
-                title: "Client-Centered Approach",
-                description: "Personalized strategies focused on your specific goals and circumstances."
+                title: "Professional Liability Insurance",
+                description: "30,000 GEL professional liability insurance for legal services. We assume full responsibility for quality and accuracy."
               },
               {
-                title: "Proven Track Record",
-                description: "Consistent success across diverse legal matters with measurable results."
+                title: "24/7 Availability & Languages",
+                description: "Services available 24/7 throughout Georgia in Georgian, Russian, and English. Accessible at any time."
               },
               {
-                title: "Comprehensive Services",
-                description: "Full-spectrum legal support from initial consultation to final resolution."
+                title: "Client Benefits & Trial Period",
+                description: "3-month trial period, no additional fees for winning court cases, and free legal consultations for your employees on personal matters."
+              },
+              {
+                title: "Affordable Monthly Service",
+                description: "Monthly legal service starting from 590 GEL including VAT. Simple termination with no fines or compensation required."
+              },
+              {
+                title: "Extensive Experience",
+                description: "Operating since 2010 with each lawyer having at least 5 years of experience. Served companies across construction, distribution, insurance, manufacturing, medical, education, and transportation sectors."
               }
             ].map((benefit, index) => (
               <motion.div
@@ -296,9 +313,9 @@ const Index = () => {
             className="grid md:grid-cols-3 gap-8"
           >
             {[
-              { icon: Phone, label: "Phone", value: "+995 XXX XXX XXX" },
-              { icon: Mail, label: "Email", value: "info@gzlawfirm.ge" },
-              { icon: MapPin, label: "Address", value: "Tbilisi, Georgia" }
+              { icon: Phone, label: "Phone", value: "+995 579 26 73 55" },
+              { icon: Phone, label: "WhatsApp", value: "+995 579 26 73 55" },
+              { icon: Mail, label: "Email", value: "Kanoncompany511@gmail.com" }
             ].map((contact, index) => (
               <motion.div 
                 key={contact.label}
