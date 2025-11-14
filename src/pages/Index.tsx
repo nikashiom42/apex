@@ -329,7 +329,7 @@ const Index = () => {
               >
                 <contact.icon className="w-8 h-8 mx-auto mb-4 text-foreground group-hover:text-primary transition-all duration-500 group-hover:scale-110" strokeWidth={1.5} />
                 <div className="text-sm text-muted-foreground mb-2">{contact.label}</div>
-                <div className="text-foreground text-sm break-all px-2">{contact.value}</div>
+                <div className="text-foreground text-sm px-2 break-normal">{contact.value}</div>
               </motion.div>
             ))}
           </motion.div>
