@@ -1,8 +1,8 @@
 import { motion, useScroll, useTransform } from "framer-motion";
 import { Scale, Users, FileText, Building, Award, Phone, Mail, MapPin } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import logo from "@/assets/logo.webp";
-import officeImg from "@/assets/office.webp";
+import logo from "@/assets/logo.jpg";
+import officeImg from "@/assets/office.jpg";
 
 const fadeInUp = {
   initial: { opacity: 0, y: 60 },
