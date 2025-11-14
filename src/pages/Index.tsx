@@ -123,16 +123,16 @@ const Index = () => {
                 viewport={{ once: true }}
                 transition={{ duration: 0.8, delay: 0.3 }}
               >
-                Our company is represented by a team of highly qualified and experienced lawyers who offer a wide range of legal services to legal entities. The professionalism and individual approach of our lawyers and attorneys ensure the success of our clients.
+                Our company is represented by a team of highly qualified and experienced lawyers who offer a wide range of legal services to legal entities.
               </motion.p>
               <motion.p 
-                className="text-lg text-muted-foreground leading-relaxed"
+                className="text-lg text-muted-foreground leading-relaxed mb-6"
                 initial={{ opacity: 0, x: -40 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.8, delay: 0.4 }}
               >
-                Since 2021, we have been a member of the Georgian Chamber of Commerce and Industry, the Asia–Africa Chamber of Commerce and Industry, the Entrepreneurs' Association, and the Georgian Small and Medium Enterprises Association. We are also proud partners of the International Black Sea University and the University of Georgia, and sponsors of the European Law Students' Association.
+                The professionalism and individual approach of our lawyers and attorneys ensure the success of our clients. We value our clients' time and are ready to offer service that is results-oriented and tailored to their needs. Since 2021, Giorgi Zarnadze Legal Company has been a member of the Georgian Chamber of Commerce and Industry, as well as the Asia–Africa Chamber of Commerce and Industry. Since 2021, our company has also been a member of the Entrepreneurs' Association and the Georgian Small and Medium Enterprises Association. Since 2020, Giorgi Zarnadze Legal Company has been a partner of the International Black Sea University and the University of Georgia. Giorgi Zarnadze Legal Company is a sponsor of the European Law Students' Association and also a sponsor of the International School of Intellect and Education.
               </motion.p>
             </div>
             <div className="grid grid-cols-2 gap-6">
