@@ -358,9 +358,14 @@ const Index = () => {
         <div className="container mx-auto max-w-6xl">
           <div className="flex flex-col md:flex-row items-center justify-between gap-6">
             <img src={logo} alt="Giorgi Zarnadze Law Firm" className="h-20 w-auto" />
-            <p className="text-sm text-muted-foreground">
-              © 2024 Giorgi Zarnadze Law Firm. All rights reserved.
-            </p>
+            <div className="flex flex-col items-center md:items-end gap-2">
+              <p className="text-sm text-muted-foreground">
+                © 2024 Giorgi Zarnadze Law Firm. All rights reserved.
+              </p>
+              <p className="text-xs text-muted-foreground">
+                Website by <a href="https://geoecom.ge/" target="_blank" rel="noopener noreferrer" className="hover:text-foreground transition-colors">GeoEcom</a>
+              </p>
+            </div>
           </div>
         </div>
       </footer>
