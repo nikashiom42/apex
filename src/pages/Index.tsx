@@ -363,7 +363,7 @@ const Index = () => {
                 © 2024 Giorgi Zarnadze Law Firm. All rights reserved.
               </p>
               <p className="text-xs text-muted-foreground">
-                Website by <a href="https://geoecom.ge/" target="_blank" rel="noopener noreferrer" className="hover:text-foreground transition-colors">GeoEcom</a>
+                Website by <a href="https://digitalalchemy.ge/" target="_blank" rel="noopener noreferrer" className="hover:text-foreground transition-colors">Digital Alchemy</a>
               </p>
             </div>
           </div>
