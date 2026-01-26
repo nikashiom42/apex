@@ -100,15 +100,15 @@ export const translations: Translations = {
     about: {
       title: "About Us",
       paragraph1:
-        "LTD Giorgi Zarnadze Legal Company has been operating on the Georgian market since 2010 and serves various private companies and legal entities. To date, our company has provided services to more than 5,000 legal entities. Our aim is to deliver service that is individualized, accessible, and client-oriented.",
+        "LTD GIORGI ZARNADZE LAW FIRM has been operating on the Georgian market since 2010, providing legal services to various private companies and legal entities. To date, our firm has served more than 10,000 corporate and individual clients. Our mission is to deliver personalized, accessible, and client-oriented legal services.",
       paragraph2:
-        "Our company is represented by a team of highly qualified and experienced lawyers who offer a wide range of legal services to legal entities.",
+        "Our firm is staffed by a team of highly qualified and experienced lawyers who offer a wide range of legal services to both corporate and individual clients.",
       paragraph3:
-        "The professionalism and individual approach of our lawyers and attorneys ensure the success of our clients. We value our clients' time and are ready to offer service that is results-oriented and tailored to their needs. Since 2021, Giorgi Zarnadze Legal Company has been a member of the Georgian Chamber of Commerce and Industry, as well as the Asia\u2013Africa Chamber of Commerce and Industry. Since 2021, our company has also been a member of the Entrepreneurs' Association and the Georgian Small and Medium Enterprises Association. Since 2020, Giorgi Zarnadze Legal Company has been a partner of the International Black Sea University and the University of Georgia. Giorgi Zarnadze Legal Company is a sponsor of the European Law Students' Association and also a sponsor of the International School of Intellect and Education.",
+        "The professionalism and individualized approach of our lawyers and attorneys ensure our clients' success. We value our clients' time and are committed to delivering effective services fully tailored to their needs. We provide legal services to individuals and legal entities in Tbilisi and Batumi. Business hours: daily from 10:00 AM to 9:00 PM. Clients may receive legal services either at our offices or remotely. Upon request, our lawyers and attorneys can travel to a location convenient for the client and provide a full range of on-site services. Citizens of Russia, Ukraine, Belarus, and Kazakhstan are eligible for special offers and discounts.",
       stats: {
         yearsValue: "14+",
         yearsLabel: "Years Experience",
-        clientsValue: "5000+",
+        clientsValue: "10000+",
         clientsLabel: "Clients Served",
         expertsValue: "10",
         expertsLabel: "Legal Experts",
@@ -242,6 +242,21 @@ export const translations: Translations = {
           description:
             "Operating since 2010 with each lawyer having at least 5 years of experience. Served companies across construction, distribution, insurance, manufacturing, medical, education, and transportation sectors.",
         },
+        {
+          title: "No Employee Overhead",
+          description:
+            "You are not required to provide paid annual leave (at least 24 working days per year) or unpaid leave (at least 15 calendar days per year), as would be required for in-house staff.",
+        },
+        {
+          title: "Scalable Team Capacity",
+          description:
+            "We are capable of efficiently managing any workload and complexity level. All 10 of our legal professionals are continuously informed of your company's ongoing matters.",
+        },
+        {
+          title: "Debt Recovery Guarantee",
+          description:
+            "Our services include comprehensive legal and procedural actions for debt recovery. In the event of a successful court decision, no additional fees are charged for our legal services.",
+        },
       ],
     },
     contact: {
@@ -251,6 +266,8 @@ export const translations: Translations = {
         { label: "Phone", value: "+995 579 142 582\n579 267 355" },
         { label: "WhatsApp", value: "+995 579 142 582\n579 267 355" },
         { label: "Email", value: "legalexperts2023@gmail.com" },
+        { label: "Facebook", value: "Georgia Legal Network" },
+        { label: "Facebook", value: "Giorgi Zarnadze Law Firm" },
       ],
       addressLabel: "Offices",
       addresses: [
@@ -469,6 +486,21 @@ export const translations: Translations = {
           description:
             "\u041a\u043e\u043c\u043f\u0430\u043d\u0438\u044f \u043e\u0441\u0443\u0449\u0435\u0441\u0442\u0432\u043b\u044f\u0435\u0442 \u0434\u0435\u044f\u0442\u0435\u043b\u044c\u043d\u043e\u0441\u0442\u044c \u0441 2010 \u0433\u043e\u0434\u0430, \u043a\u0430\u0436\u0434\u044b\u0439 \u044e\u0440\u0438\u0441\u0442 \u0438\u043c\u0435\u0435\u0442 \u043d\u0435 \u043c\u0435\u043d\u0435\u0435 5 \u043b\u0435\u0442 \u043f\u0440\u043e\u0444\u0435\u0441\u0441\u0438\u043e\u043d\u0430\u043b\u044c\u043d\u043e\u0433\u043e \u043e\u043f\u044b\u0442\u0430. \u041e\u0431\u0441\u043b\u0443\u0436\u0438\u0432\u0430\u0435\u043c \u043a\u043e\u043c\u043f\u0430\u043d\u0438\u0438 \u0432 \u0441\u0444\u0435\u0440\u0430\u0445 \u0441\u0442\u0440\u043e\u0438\u0442\u0435\u043b\u044c\u0441\u0442\u0432\u0430, \u0434\u0438\u0441\u0442\u0440\u0438\u0431\u0443\u0446\u0438\u0438, \u0441\u0442\u0440\u0430\u0445\u043e\u0432\u0430\u043d\u0438\u044f, \u043f\u0440\u043e\u0438\u0437\u0432\u043e\u0434\u0441\u0442\u0432\u0430, \u043c\u0435\u0434\u0438\u0446\u0438\u043d\u044b, \u043e\u0431\u0440\u0430\u0437\u043e\u0432\u0430\u043d\u0438\u044f \u0438 \u0442\u0440\u0430\u043d\u0441\u043f\u043e\u0440\u0442\u0430.",
         },
+        {
+          title: "\u0411\u0435\u0437 \u0437\u0430\u0442\u0440\u0430\u0442 \u043d\u0430 \u0441\u043e\u0434\u0435\u0440\u0436\u0430\u043d\u0438\u0435 \u0441\u043e\u0442\u0440\u0443\u0434\u043d\u0438\u043a\u0430",
+          description:
+            "\u0412\u0430\u043c \u043d\u0435 \u0442\u0440\u0435\u0431\u0443\u0435\u0442\u0441\u044f \u043f\u0440\u0435\u0434\u043e\u0441\u0442\u0430\u0432\u043b\u044f\u0442\u044c \u043e\u043f\u043b\u0430\u0447\u0438\u0432\u0430\u0435\u043c\u044b\u0439 \u043e\u0442\u043f\u0443\u0441\u043a (\u043d\u0435 \u043c\u0435\u043d\u0435\u0435 24 \u0440\u0430\u0431\u043e\u0447\u0438\u0445 \u0434\u043d\u0435\u0439 \u0432 \u0433\u043e\u0434\u0443) \u0438\u043b\u0438 \u043d\u0435\u043e\u043f\u043b\u0430\u0447\u0438\u0432\u0430\u0435\u043c\u044b\u0439 \u043e\u0442\u043f\u0443\u0441\u043a (\u043d\u0435 \u043c\u0435\u043d\u0435\u0435 15 \u043a\u0430\u043b\u0435\u043d\u0434\u0430\u0440\u043d\u044b\u0445 \u0434\u043d\u0435\u0439 \u0432 \u0433\u043e\u0434\u0443).",
+        },
+        {
+          title: "\u041c\u0430\u0441\u0448\u0442\u0430\u0431\u0438\u0440\u0443\u0435\u043c\u0430\u044f \u043a\u043e\u043c\u0430\u043d\u0434\u0430",
+          description:
+            "\u041c\u044b \u0441\u043f\u043e\u0441\u043e\u0431\u043d\u044b \u0431\u044b\u0441\u0442\u0440\u043e \u0438 \u044d\u0444\u0444\u0435\u043a\u0442\u0438\u0432\u043d\u043e \u0441\u043f\u0440\u0430\u0432\u043b\u044f\u0442\u044c\u0441\u044f \u0441 \u043b\u044e\u0431\u044b\u043c \u043e\u0431\u044a\u0451\u043c\u043e\u043c \u0440\u0430\u0431\u043e\u0442 \u0438 \u0443\u0440\u043e\u0432\u043d\u0435\u043c \u0441\u043b\u043e\u0436\u043d\u043e\u0441\u0442\u0438. \u0412\u0441\u0435 10 \u043d\u0430\u0448\u0438\u0445 \u044e\u0440\u0438\u0441\u0442\u043e\u0432 \u043f\u043e\u0441\u0442\u043e\u044f\u043d\u043d\u043e \u043e\u0441\u0432\u0435\u0434\u043e\u043c\u043b\u0435\u043d\u044b \u043e \u0442\u0435\u043a\u0443\u0449\u0438\u0445 \u0432\u043e\u043f\u0440\u043e\u0441\u0430\u0445 \u0432\u0430\u0448\u0435\u0439 \u043a\u043e\u043c\u043f\u0430\u043d\u0438\u0438.",
+        },
+        {
+          title: "\u0413\u0430\u0440\u0430\u043d\u0442\u0438\u044f \u043f\u043e \u0432\u0437\u044b\u0441\u043a\u0430\u043d\u0438\u044e \u0437\u0430\u0434\u043e\u043b\u0436\u0435\u043d\u043d\u043e\u0441\u0442\u0438",
+          description:
+            "\u0412 \u043f\u0435\u0440\u0435\u0447\u0435\u043d\u044c \u043d\u0430\u0448\u0438\u0445 \u0443\u0441\u043b\u0443\u0433 \u0442\u0430\u043a\u0436\u0435 \u0432\u0445\u043e\u0434\u0438\u0442 \u043f\u0440\u043e\u0432\u0435\u0434\u0435\u043d\u0438\u0435 \u043a\u043e\u043c\u043f\u043b\u0435\u043a\u0441\u043d\u044b\u0445 \u044e\u0440\u0438\u0434\u0438\u0447\u0435\u0441\u043a\u0438\u0445 \u0438 \u043f\u0440\u043e\u0446\u0435\u0441\u0441\u0443\u0430\u043b\u044c\u043d\u044b\u0445 \u0434\u0435\u0439\u0441\u0442\u0432\u0438\u0439 \u043f\u043e \u0432\u0437\u044b\u0441\u043a\u0430\u043d\u0438\u044e \u0437\u0430\u0434\u043e\u043b\u0436\u0435\u043d\u043d\u043e\u0441\u0442\u0438 \u0441 \u0434\u043e\u043b\u0436\u043d\u0438\u043a\u043e\u0432. \u0412 \u0441\u043b\u0443\u0447\u0430\u0435 \u0432\u044b\u0438\u0433\u0440\u044b\u0448\u0430 \u0434\u0435\u043b\u0430 \u0432 \u0441\u0443\u0434\u0435 \u0434\u043e\u043f\u043e\u043b\u043d\u0438\u0442\u0435\u043b\u044c\u043d\u0430\u044f \u043e\u043f\u043b\u0430\u0442\u0430 \u0443\u0441\u043b\u0443\u0433 \u043d\u0430\u0448\u0435\u0439 \u043a\u043e\u043c\u043f\u0430\u043d\u0438\u0438 \u043d\u0435 \u0442\u0440\u0435\u0431\u0443\u0435\u0442\u0441\u044f.",
+        },
       ],
     },
     contact: {
@@ -487,6 +519,8 @@ export const translations: Translations = {
             "\u042d\u043b\u0435\u043a\u0442\u0440\u043e\u043d\u043d\u0430\u044f \u043f\u043e\u0447\u0442\u0430",
           value: "legalexperts2023@gmail.com",
         },
+        { label: "Facebook", value: "Georgia Legal Network" },
+        { label: "Facebook", value: "Giorgi Zarnadze Law Firm" },
       ],
       addressLabel: "\u041e\u0444\u0438\u0441\u044b",
       addresses: [
