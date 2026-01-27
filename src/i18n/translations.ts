@@ -117,7 +117,7 @@ export const translations: Translations = {
       },
     },
     services: {
-      title: "Our Legal Services",
+      title: "Our Legal Services Include",
       subtitle: "Comprehensive legal solutions tailored to your unique needs",
       items: [
         {
@@ -153,7 +153,7 @@ export const translations: Translations = {
       ],
     },
     individualServices: {
-      title: "Services for Individuals",
+      title: "What We Offer to Private Individuals in Tbilisi and Batumi",
       subtitle: "Legal services for individuals in Tbilisi and Batumi",
       items: [
         { title: "Legal Consultation", price: "$30" },
@@ -210,7 +210,7 @@ export const translations: Translations = {
       otherServices: "Other legal services",
     },
     whyChooseUs: {
-      title: "Why Choose Us",
+      title: "Why Choose Us?",
       items: [
         {
           title: "Full Team at Your Service",
@@ -260,7 +260,7 @@ export const translations: Translations = {
       ],
     },
     contact: {
-      title: "Get in Touch",
+      title: "Contact Information",
       subtitle: "Schedule a consultation with our legal experts",
       items: [
         { label: "Phone", value: "+995 579 142 582\n579 267 355" },
@@ -325,7 +325,7 @@ export const translations: Translations = {
     },
     services: {
       title:
-        "\u041d\u0430\u0448\u0438 \u044e\u0440\u0438\u0434\u0438\u0447\u0435\u0441\u043a\u0438\u0435 \u0443\u0441\u043b\u0443\u0433\u0438",
+        "\u041d\u0430\u0448\u0438 \u044e\u0440\u0438\u0434\u0438\u0447\u0435\u0441\u043a\u0438\u0435 \u0443\u0441\u043b\u0443\u0433\u0438 \u0432\u043a\u043b\u044e\u0447\u0430\u044e\u0442",
       subtitle:
         "\u041a\u043e\u043c\u043f\u043b\u0435\u043a\u0441\u043d\u044b\u0435 \u044e\u0440\u0438\u0434\u0438\u0447\u0435\u0441\u043a\u0438\u0435 \u0440\u0435\u0448\u0435\u043d\u0438\u044f, \u0430\u0434\u0430\u043f\u0442\u0438\u0440\u043e\u0432\u0430\u043d\u043d\u044b\u0435 \u043f\u043e\u0434 \u0432\u0430\u0448\u0438 \u043f\u043e\u0442\u0440\u0435\u0431\u043d\u043e\u0441\u0442\u0438",
       items: [
@@ -369,7 +369,7 @@ export const translations: Translations = {
     },
     individualServices: {
       title:
-        "\u0423\u0441\u043b\u0443\u0433\u0438 \u0434\u043b\u044f \u0447\u0430\u0441\u0442\u043d\u044b\u0445 \u043b\u0438\u0446",
+        "\u0427\u0442\u043e \u043c\u044b \u043f\u0440\u0435\u0434\u043b\u0430\u0433\u0430\u0435\u043c \u0447\u0430\u0441\u0442\u043d\u044b\u043c \u043b\u0438\u0446\u0430\u043c \u0432 \u0422\u0431\u0438\u043b\u0438\u0441\u0438 \u0438 \u0411\u0430\u0442\u0443\u043c\u0438",
       subtitle:
         "\u042e\u0440\u0438\u0434\u0438\u0447\u0435\u0441\u043a\u0438\u0435 \u0443\u0441\u043b\u0443\u0433\u0438 \u0434\u043b\u044f \u0447\u0430\u0441\u0442\u043d\u044b\u0445 \u043b\u0438\u0446 \u0432 \u0422\u0431\u0438\u043b\u0438\u0441\u0438 \u0438 \u0411\u0430\u0442\u0443\u043c\u0438",
       items: [
@@ -448,7 +448,7 @@ export const translations: Translations = {
         "\u0418\u043d\u044b\u0435 \u044e\u0440\u0438\u0434\u0438\u0447\u0435\u0441\u043a\u0438\u0435 \u0443\u0441\u043b\u0443\u0433\u0438",
     },
     whyChooseUs: {
-      title: "\u041f\u043e\u0447\u0435\u043c\u0443 \u043c\u044b",
+      title: "\u041f\u043e\u0447\u0435\u043c\u0443 \u043c\u044b?",
       items: [
         {
           title:
@@ -505,7 +505,7 @@ export const translations: Translations = {
     },
     contact: {
       title:
-        "\u0421\u0432\u044f\u0436\u0438\u0442\u0435\u0441\u044c \u0441 \u043d\u0430\u043c\u0438",
+        "\u041a\u043e\u043d\u0442\u0430\u043a\u0442\u043d\u0430\u044f \u0438\u043d\u0444\u043e\u0440\u043c\u0430\u0446\u0438\u044f",
       subtitle:
         "\u0417\u0430\u043f\u0438\u0448\u0438\u0442\u0435\u0441\u044c \u043d\u0430 \u043a\u043e\u043d\u0441\u0443\u043b\u044c\u0442\u0430\u0446\u0438\u044e \u043a \u043d\u0430\u0448\u0438\u043c \u044e\u0440\u0438\u0441\u0442\u0430\u043c",
       items: [
