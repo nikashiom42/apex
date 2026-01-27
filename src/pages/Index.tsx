@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Scale, Users, FileText, Building, Award, Phone, Mail, MapPin, DollarSign } from "lucide-react";
+import { Scale, Users, FileText, Building, Award, Phone, Mail, MapPin, DollarSign, Globe } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import LanguageSwitcher from "@/components/LanguageSwitcher";
 import { useLanguage } from "@/i18n/LanguageContext";
@@ -327,7 +327,7 @@ const Index = () => {
             className="grid md:grid-cols-3 gap-8 mb-12"
           >
             {t.contact.items.map((contact, index) => {
-              const icons = [Phone, Phone, Mail];
+              const icons = [Phone, Phone, Mail, Globe, Globe];
               const ContactIcon = icons[index];
               return (
                 <motion.div
