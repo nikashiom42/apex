@@ -156,55 +156,59 @@ export const translations: Translations = {
       title: "What We Offer to Private Individuals in Tbilisi and Batumi",
       subtitle: "Legal services for individuals in Tbilisi and Batumi",
       items: [
-        { title: "Legal Consultation", price: "$30" },
+        { title: "Legal consultation", price: "USD 30" },
         {
-          title: "Drafting & Analysis of Contracts and Legal Documentation",
-          price: "$50",
+          title:
+            "Drafting and legal review of contracts and any other legal documentation",
+          price: "USD 50",
         },
         {
           title:
-            "Attorney Representation in Courts of All Instances (incl. Arbitration)",
-          price: "from $200",
+            "Legal representation before courts of all instances (including arbitration)",
+          price: "from USD 200",
         },
         {
-          title: "Representation in Administrative Complaints",
-          price: "from $80",
+          title: "Representation in administrative complaint proceedings",
+          price: "from USD 80",
         },
-        { title: "Obtaining Licenses and Permits", price: "from $500" },
-        { title: "Debt Recovery Procedures", price: "from $100" },
+        { title: "Obtaining licenses and permits", price: "from USD 500" },
         {
-          title:
-            "Representation in Relations with Individuals and Legal Entities",
-          price: "from $50",
-        },
-        {
-          title: "Trademark Registration and Patenting",
-          price: "$200",
+          title: "Debt recovery and collection procedures",
+          price: "from USD 100",
         },
         {
           title:
-            "Residence Permit and Georgian Citizenship Legal Services",
-          price: "from $300",
+            "Legal representation in relations with individuals and legal entities",
+          price: "from USD 50",
         },
         {
-          title: "Company Registration at the House of Justice",
-          price: "$100",
+          title: "Registration and trademark protection",
+          price: "USD 200",
         },
         {
-          title: "Individual Entrepreneur Registration",
-          price: "$20",
+          title:
+            "Legal services related to obtaining residence permits and citizenship of Georgia",
+          price: "from USD 300",
         },
         {
-          title: "Legal Due Diligence of Real Estate and Companies",
-          price: "$40",
+          title: "Company registration at the Public Service Hall",
+          price: "USD 100",
         },
         {
-          title: "Document & Information Requests from Government Agencies",
-          price: "$20",
+          title: "Registration of an individual entrepreneur (sole proprietorship)",
+          price: "USD 20",
         },
         {
-          title: "Opening Companies in the Free Industrial Zone",
-          price: "$700",
+          title: "Legal due diligence of real estate and companies",
+          price: "USD 40",
+        },
+        {
+          title: "Obtaining documents and information from state authorities",
+          price: "USD 20",
+        },
+        {
+          title: "Company incorporation in a Free Industrial Zone (FIZ)",
+          price: "USD 700",
         },
       ],
       otherServices: "Other legal services",
@@ -263,8 +267,8 @@ export const translations: Translations = {
       title: "Contact Information",
       subtitle: "Schedule a consultation with our legal experts",
       items: [
-        { label: "Phone", value: "+995 579 142 582\n579 267 355" },
-        { label: "WhatsApp", value: "+995 579 142 582\n579 267 355" },
+        { label: "Phone", value: "+995 579 142 582\n+995 579 267 355" },
+        { label: "WhatsApp", value: "+995 579 142 582\n+995 579 267 355" },
         { label: "Email", value: "legalexperts2023@gmail.com" },
         { label: "Facebook", value: "Georgia Legal Network" },
         { label: "Facebook", value: "Giorgi Zarnadze Law Firm" },
@@ -274,11 +278,11 @@ export const translations: Translations = {
         {
           city: "Tbilisi",
           address:
-            "19 David Gamrekeli St., 3rd Floor, Office 301 (Business Center)",
+            "19 Davit Gamrekeli Street, 3rd Floor, Office No. 301 (Business Center)",
         },
         {
           city: "Batumi",
-          address: '7a Akhmeteli St. (Business Center "Terminal")',
+          address: '7a Akhmeteli Street, "Terminal" Business Center',
         },
       ],
     },
@@ -376,72 +380,72 @@ export const translations: Translations = {
         {
           title:
             "\u042e\u0440\u0438\u0434\u0438\u0447\u0435\u0441\u043a\u0430\u044f \u043a\u043e\u043d\u0441\u0443\u043b\u044c\u0442\u0430\u0446\u0438\u044f",
-          price: "30$",
+          price: "30 \u0434\u043e\u043b\u043b\u0430\u0440\u043e\u0432 \u0421\u0428\u0410",
         },
         {
           title:
-            "\u041f\u043e\u0434\u0433\u043e\u0442\u043e\u0432\u043a\u0430 \u0438 \u0430\u043d\u0430\u043b\u0438\u0437 \u0434\u043e\u0433\u043e\u0432\u043e\u0440\u043e\u0432 \u0438 \u044e\u0440\u0438\u0434\u0438\u0447\u0435\u0441\u043a\u043e\u0439 \u0434\u043e\u043a\u0443\u043c\u0435\u043d\u0442\u0430\u0446\u0438\u0438",
-          price: "50$",
+            "\u041f\u043e\u0434\u0433\u043e\u0442\u043e\u0432\u043a\u0430 \u0438 \u0430\u043d\u0430\u043b\u0438\u0437 \u0434\u043e\u0433\u043e\u0432\u043e\u0440\u043e\u0432 \u0438 \u043b\u044e\u0431\u043e\u0439 \u044e\u0440\u0438\u0434\u0438\u0447\u0435\u0441\u043a\u043e\u0439 \u0434\u043e\u043a\u0443\u043c\u0435\u043d\u0442\u0430\u0446\u0438\u0438",
+          price: "50 \u0434\u043e\u043b\u043b\u0430\u0440\u043e\u0432 \u0421\u0428\u0410",
         },
         {
           title:
             "\u0410\u0434\u0432\u043e\u043a\u0430\u0442\u0441\u043a\u043e\u0435 \u043f\u0440\u0435\u0434\u0441\u0442\u0430\u0432\u0438\u0442\u0435\u043b\u044c\u0441\u0442\u0432\u043e \u0432 \u0441\u0443\u0434\u0430\u0445 \u0432\u0441\u0435\u0445 \u0438\u043d\u0441\u0442\u0430\u043d\u0446\u0438\u0439 (\u0432\u043a\u043b\u044e\u0447\u0430\u044f \u0430\u0440\u0431\u0438\u0442\u0440\u0430\u0436)",
-          price: "\u043e\u0442 200$",
+          price: "\u043e\u0442 200 \u0434\u043e\u043b\u043b\u0430\u0440\u043e\u0432 \u0421\u0428\u0410",
         },
         {
           title:
             "\u041f\u0440\u0435\u0434\u0441\u0442\u0430\u0432\u0438\u0442\u0435\u043b\u044c\u0441\u0442\u0432\u043e \u043f\u0440\u0438 \u0440\u0430\u0441\u0441\u043c\u043e\u0442\u0440\u0435\u043d\u0438\u0438 \u0430\u0434\u043c\u0438\u043d\u0438\u0441\u0442\u0440\u0430\u0442\u0438\u0432\u043d\u044b\u0445 \u0436\u0430\u043b\u043e\u0431",
-          price: "\u043e\u0442 80$",
+          price: "\u043e\u0442 80 \u0434\u043e\u043b\u043b\u0430\u0440\u043e\u0432 \u0421\u0428\u0410",
         },
         {
           title:
             "\u041f\u043e\u043b\u0443\u0447\u0435\u043d\u0438\u0435 \u043b\u0438\u0446\u0435\u043d\u0437\u0438\u0439 \u0438 \u0440\u0430\u0437\u0440\u0435\u0448\u0435\u043d\u0438\u0439",
-          price: "\u043e\u0442 500$",
+          price: "\u043e\u0442 500 \u0434\u043e\u043b\u043b\u0430\u0440\u043e\u0432 \u0421\u0428\u0410",
         },
         {
           title:
-            "\u0412\u0437\u044b\u0441\u043a\u0430\u043d\u0438\u0435 \u0434\u0435\u043d\u0435\u0436\u043d\u044b\u0445 \u0437\u0430\u0434\u043e\u043b\u0436\u0435\u043d\u043d\u043e\u0441\u0442\u0435\u0439",
-          price: "\u043e\u0442 100$",
+            "\u041e\u0441\u0443\u0449\u0435\u0441\u0442\u0432\u043b\u0435\u043d\u0438\u0435 \u043f\u0440\u043e\u0446\u0435\u0434\u0443\u0440 \u043f\u043e \u0432\u0437\u044b\u0441\u043a\u0430\u043d\u0438\u044e \u0434\u0435\u043d\u0435\u0436\u043d\u044b\u0445 \u0437\u0430\u0434\u043e\u043b\u0436\u0435\u043d\u043d\u043e\u0441\u0442\u0435\u0439",
+          price: "\u043e\u0442 100 \u0434\u043e\u043b\u043b\u0430\u0440\u043e\u0432 \u0421\u0428\u0410",
         },
         {
           title:
             "\u041f\u0440\u0435\u0434\u0441\u0442\u0430\u0432\u0438\u0442\u0435\u043b\u044c\u0441\u0442\u0432\u043e \u0432\u043e \u0432\u0437\u0430\u0438\u043c\u043e\u043e\u0442\u043d\u043e\u0448\u0435\u043d\u0438\u044f\u0445 \u0441 \u0444\u0438\u0437\u0438\u0447\u0435\u0441\u043a\u0438\u043c\u0438 \u0438 \u044e\u0440\u0438\u0434\u0438\u0447\u0435\u0441\u043a\u0438\u043c\u0438 \u043b\u0438\u0446\u0430\u043c\u0438",
-          price: "\u043e\u0442 50$",
+          price: "\u043e\u0442 50 \u0434\u043e\u043b\u043b\u0430\u0440\u043e\u0432 \u0421\u0428\u0410",
         },
         {
           title:
             "\u0420\u0435\u0433\u0438\u0441\u0442\u0440\u0430\u0446\u0438\u044f \u0438 \u043f\u0430\u0442\u0435\u043d\u0442\u043e\u0432\u0430\u043d\u0438\u0435 \u0442\u043e\u0432\u0430\u0440\u043d\u044b\u0445 \u0437\u043d\u0430\u043a\u043e\u0432",
-          price: "200$",
+          price: "200 \u0434\u043e\u043b\u043b\u0430\u0440\u043e\u0432 \u0421\u0428\u0410",
         },
         {
           title:
             "\u042e\u0440\u0438\u0434\u0438\u0447\u0435\u0441\u043a\u0438\u0435 \u0443\u0441\u043b\u0443\u0433\u0438 \u043f\u043e \u043f\u043e\u043b\u0443\u0447\u0435\u043d\u0438\u044e \u0432\u0438\u0434\u0430 \u043d\u0430 \u0436\u0438\u0442\u0435\u043b\u044c\u0441\u0442\u0432\u043e \u0438 \u0433\u0440\u0430\u0436\u0434\u0430\u043d\u0441\u0442\u0432\u0430 \u0413\u0440\u0443\u0437\u0438\u0438",
-          price: "\u043e\u0442 300$",
+          price: "\u043e\u0442 300 \u0434\u043e\u043b\u043b\u0430\u0440\u043e\u0432 \u0421\u0428\u0410",
         },
         {
           title:
             "\u0420\u0435\u0433\u0438\u0441\u0442\u0440\u0430\u0446\u0438\u044f \u043a\u043e\u043c\u043f\u0430\u043d\u0438\u0439 \u0432 \u0414\u043e\u043c\u0435 \u044e\u0441\u0442\u0438\u0446\u0438\u0438",
-          price: "100$",
+          price: "100 \u0434\u043e\u043b\u043b\u0430\u0440\u043e\u0432 \u0421\u0428\u0410",
         },
         {
           title:
             "\u0420\u0435\u0433\u0438\u0441\u0442\u0440\u0430\u0446\u0438\u044f \u0438\u043d\u0434\u0438\u0432\u0438\u0434\u0443\u0430\u043b\u044c\u043d\u043e\u0433\u043e \u043f\u0440\u0435\u0434\u043f\u0440\u0438\u043d\u0438\u043c\u0430\u0442\u0435\u043b\u044f",
-          price: "20$",
+          price: "20 \u0434\u043e\u043b\u043b\u0430\u0440\u043e\u0432 \u0421\u0428\u0410",
         },
         {
           title:
             "\u041f\u0440\u0430\u0432\u043e\u0432\u0430\u044f \u043f\u0440\u043e\u0432\u0435\u0440\u043a\u0430 \u043d\u0435\u0434\u0432\u0438\u0436\u0438\u043c\u043e\u0441\u0442\u0438 \u0438 \u043a\u043e\u043c\u043f\u0430\u043d\u0438\u0439",
-          price: "40$",
+          price: "40 \u0434\u043e\u043b\u043b\u0430\u0440\u043e\u0432 \u0421\u0428\u0410",
         },
         {
           title:
-            "\u0417\u0430\u043f\u0440\u043e\u0441 \u0434\u043e\u043a\u0443\u043c\u0435\u043d\u0442\u043e\u0432 \u0438\u0437 \u0433\u043e\u0441\u0443\u0434\u0430\u0440\u0441\u0442\u0432\u0435\u043d\u043d\u044b\u0445 \u043e\u0440\u0433\u0430\u043d\u043e\u0432",
-          price: "20$",
+            "\u0417\u0430\u043f\u0440\u043e\u0441 \u0434\u043e\u043a\u0443\u043c\u0435\u043d\u0442\u043e\u0432 \u0438 \u0438\u043d\u0444\u043e\u0440\u043c\u0430\u0446\u0438\u0438 \u0438\u0437 \u0433\u043e\u0441\u0443\u0434\u0430\u0440\u0441\u0442\u0432\u0435\u043d\u043d\u044b\u0445 \u043e\u0440\u0433\u0430\u043d\u043e\u0432",
+          price: "20 \u0434\u043e\u043b\u043b\u0430\u0440\u043e\u0432 \u0421\u0428\u0410",
         },
         {
           title:
             "\u041e\u0442\u043a\u0440\u044b\u0442\u0438\u0435 \u043a\u043e\u043c\u043f\u0430\u043d\u0438\u0439 \u0432 \u0441\u0432\u043e\u0431\u043e\u0434\u043d\u043e\u0439 \u0438\u043d\u0434\u0443\u0441\u0442\u0440\u0438\u0430\u043b\u044c\u043d\u043e\u0439 \u0437\u043e\u043d\u0435",
-          price: "700$",
+          price: "700 \u0434\u043e\u043b\u043b\u0430\u0440\u043e\u0432 \u0421\u0428\u0410",
         },
       ],
       otherServices:
@@ -511,9 +515,9 @@ export const translations: Translations = {
       items: [
         {
           label: "\u0422\u0435\u043b\u0435\u0444\u043e\u043d",
-          value: "+995 579 142 582\n579 267 355",
+          value: "+995 579 142 582\n+995 579 267 355",
         },
-        { label: "WhatsApp", value: "+995 579 142 582\n579 267 355" },
+        { label: "WhatsApp", value: "+995 579 142 582\n+995 579 267 355" },
         {
           label:
             "\u042d\u043b\u0435\u043a\u0442\u0440\u043e\u043d\u043d\u0430\u044f \u043f\u043e\u0447\u0442\u0430",
@@ -532,7 +536,7 @@ export const translations: Translations = {
         {
           city: "\u0411\u0430\u0442\u0443\u043c\u0438",
           address:
-            '\u0443\u043b. \u0410\u0445\u043c\u0435\u0442\u0435\u043b\u0438, \u2116 7\u0430 (\u0411\u0438\u0437\u043d\u0435\u0441-\u0446\u0435\u043d\u0442\u0440 "\u0422\u0435\u0440\u043c\u0438\u043d\u0430\u043b")',
+            '\u0443\u043b. \u0410\u0445\u043c\u0435\u0442\u0435\u043b\u0438, \u2116 7\u0430 (\u0411\u0438\u0437\u043d\u0435\u0441-\u0446\u0435\u043d\u0442\u0440 \u00ab\u0422\u0435\u0440\u043c\u0438\u043d\u0430\u043b\u00bb)',
         },
       ],
     },
