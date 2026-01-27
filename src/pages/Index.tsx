@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Scale, Users, FileText, Building, Award, Phone, Mail, MapPin, DollarSign, Globe } from "lucide-react";
+import { Phone, Mail, MapPin, Globe } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import LanguageSwitcher from "@/components/LanguageSwitcher";
 import { useLanguage } from "@/i18n/LanguageContext";
@@ -22,8 +22,6 @@ const staggerItem = {
   initial: { opacity: 0, y: 40 },
   whileInView: { opacity: 1, y: 0 }
 };
-
-const serviceIcons = [FileText, Building, Scale, Users, Award, FileText];
 
 const Index = () => {
   const { t } = useLanguage();
@@ -116,7 +114,7 @@ const Index = () => {
         </div>
       </section>
 
-      {/* About Section */}
+      {/* 1. About Us */}
       <section id="about" className="py-20 px-6 bg-secondary relative overflow-hidden">
         <div className="container mx-auto max-w-6xl relative z-10">
           <motion.div {...fadeInUp} transition={{ duration: 0.8 }} className="grid md:grid-cols-2 gap-12 items-start">
@@ -130,33 +128,18 @@ const Index = () => {
               >
                 {t.about.title}
               </motion.h2>
-              <motion.p
-                className="text-base text-muted-foreground leading-relaxed"
-                initial={{ opacity: 0, x: -40 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.8, delay: 0.2 }}
-              >
-                {t.about.paragraph1}
-              </motion.p>
-              <motion.p
-                className="text-base text-muted-foreground leading-relaxed"
-                initial={{ opacity: 0, x: -40 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.8, delay: 0.3 }}
-              >
-                {t.about.paragraph2}
-              </motion.p>
-              <motion.p
-                className="text-base text-muted-foreground leading-relaxed"
-                initial={{ opacity: 0, x: -40 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.8, delay: 0.4 }}
-              >
-                {t.about.paragraph3}
-              </motion.p>
+              {t.about.paragraphs.map((paragraph, index) => (
+                <motion.p
+                  key={index}
+                  className="text-base text-muted-foreground leading-relaxed"
+                  initial={{ opacity: 0, x: -40 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.8, delay: 0.2 + index * 0.1 }}
+                >
+                  {paragraph}
+                </motion.p>
+              ))}
             </div>
             <div className="grid grid-cols-2 gap-4">
               {[
@@ -190,130 +173,133 @@ const Index = () => {
         </motion.div>
       </section>
 
-      {/* Services Section */}
+      {/* 2. What We Offer to Private Individuals */}
       <section id="services" className="py-20 px-6">
-        <div className="container mx-auto max-w-6xl">
-          <motion.div {...fadeInUp} transition={{ duration: 0.8 }} className="text-center mb-16">
-            <h2 className="text-4xl font-light tracking-tight text-foreground mb-6">
-              {t.services.title}
-            </h2>
-            <p className="text-base text-muted-foreground max-w-2xl mx-auto">
-              {t.services.subtitle}
-            </p>
-          </motion.div>
-
-          <motion.div
-            variants={staggerContainer}
-            initial="initial"
-            whileInView="whileInView"
-            viewport={{ once: true, margin: "-100px" }}
-            className="grid md:grid-cols-3 gap-8"
-          >
-            {t.services.items.map((service, index) => {
-              const Icon = serviceIcons[index];
-              return (
-                <motion.div
-                  key={index}
-                  variants={staggerItem}
-                  transition={{ delay: index * 0.1, duration: 0.6 }}
-                  className="bg-card p-8 rounded-2xl border border-border hover:shadow-xl hover:border-primary/50 transition-all duration-500 group hover:scale-105 cursor-pointer"
-                >
-                  <Icon className="w-12 h-12 mb-6 text-foreground group-hover:text-primary transition-all duration-500 group-hover:scale-110" strokeWidth={1.5} />
-                  <h3 className="text-xl font-light mb-4 text-foreground group-hover:text-primary transition-colors duration-300">{service.title}</h3>
-                  <p className="text-sm text-muted-foreground leading-relaxed">{service.description}</p>
-                </motion.div>
-              );
-            })}
-          </motion.div>
-        </div>
-      </section>
-
-      {/* Individual Services Section */}
-      <section className="py-20 px-6 bg-secondary">
-        <div className="container mx-auto max-w-6xl">
-          <motion.div {...fadeInUp} transition={{ duration: 0.8 }} className="text-center mb-16">
-            <h2 className="text-4xl font-light tracking-tight text-foreground mb-6">
+        <div className="container mx-auto max-w-4xl">
+          <motion.div {...fadeInUp} transition={{ duration: 0.8 }} className="text-center mb-12">
+            <h2 className="text-4xl font-light tracking-tight text-foreground">
               {t.individualServices.title}
             </h2>
-            <p className="text-base text-muted-foreground max-w-2xl mx-auto">
-              {t.individualServices.subtitle}
-            </p>
           </motion.div>
-
           <motion.div
             variants={staggerContainer}
             initial="initial"
             whileInView="whileInView"
-            viewport={{ once: true, margin: "-100px" }}
-            className="grid md:grid-cols-2 gap-4 max-w-4xl mx-auto"
+            viewport={{ once: true, margin: "-50px" }}
+            className="space-y-3"
           >
             {t.individualServices.items.map((item, index) => (
               <motion.div
                 key={index}
                 variants={staggerItem}
                 transition={{ delay: index * 0.05, duration: 0.5 }}
-                className="flex items-center justify-between bg-background p-4 rounded-xl border border-border hover:shadow-md hover:border-primary/30 transition-all duration-300 group"
+                className="flex gap-3 bg-card p-4 rounded-xl border border-border hover:shadow-md hover:border-primary/30 transition-all duration-300 group"
               >
-                <div className="flex items-center gap-3 flex-1 min-w-0">
-                  <DollarSign className="w-5 h-5 text-[hsl(var(--logo-gold))] flex-shrink-0" strokeWidth={1.5} />
-                  <span className="text-sm text-foreground group-hover:text-primary transition-colors duration-300 truncate">{item.title}</span>
-                </div>
-                <span className="text-sm font-medium text-foreground ml-4 flex-shrink-0 bg-secondary px-3 py-1 rounded-full">{item.price}</span>
+                <span className="text-[hsl(var(--logo-gold))] mt-0.5 flex-shrink-0 text-lg leading-none">&bull;</span>
+                <p className="text-sm text-muted-foreground leading-relaxed group-hover:text-foreground transition-colors duration-300">{item}</p>
               </motion.div>
             ))}
-            <motion.div
-              variants={staggerItem}
-              transition={{ delay: 0.7, duration: 0.5 }}
-              className="md:col-span-2 text-center mt-4"
-            >
-              <p className="text-sm text-muted-foreground italic">{t.individualServices.otherServices}</p>
-            </motion.div>
           </motion.div>
         </div>
       </section>
 
-      {/* Why Choose Us Section */}
-      <section className="py-20 px-6">
-        <div className="container mx-auto max-w-6xl">
-          <motion.div {...fadeInUp} transition={{ duration: 0.8 }} className="text-center mb-16">
-            <h2 className="text-4xl font-light tracking-tight text-foreground mb-6">
-              {t.whyChooseUs.title}
+      {/* 3. We Offer to Companies */}
+      <section className="py-20 px-6 bg-secondary">
+        <div className="container mx-auto max-w-4xl">
+          <motion.div {...fadeInUp} transition={{ duration: 0.8 }} className="text-center mb-12">
+            <h2 className="text-4xl font-light tracking-tight text-foreground">
+              {t.companyServices.title}
             </h2>
           </motion.div>
-
           <motion.div
             variants={staggerContainer}
             initial="initial"
             whileInView="whileInView"
-            viewport={{ once: true, margin: "-100px" }}
-            className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
+            viewport={{ once: true, margin: "-50px" }}
+            className="space-y-3"
           >
-            {t.whyChooseUs.items.map((benefit, index) => (
+            {t.companyServices.items.map((item, index) => (
               <motion.div
                 key={index}
                 variants={staggerItem}
-                transition={{ delay: index * 0.1, duration: 0.6 }}
-                className="flex flex-col group cursor-pointer bg-card p-6 rounded-2xl border border-border hover:shadow-lg hover:border-primary/50 transition-all duration-500 h-full"
-                whileHover={{ y: -5 }}
+                transition={{ delay: index * 0.1, duration: 0.5 }}
+                className="flex gap-3 bg-background p-5 rounded-xl border border-border hover:shadow-md hover:border-primary/30 transition-all duration-300 group"
               >
-                <div className="flex-shrink-0 w-12 h-12 rounded-full bg-foreground text-background flex items-center justify-center font-light text-lg group-hover:scale-110 group-hover:bg-primary transition-all duration-500 mb-4">
-                  {index + 1}
-                </div>
-                <div>
-                  <h3 className="text-xl font-light mb-3 text-foreground group-hover:text-primary transition-colors duration-300">{benefit.title}</h3>
-                  <p className="text-muted-foreground leading-relaxed text-sm">{benefit.description}</p>
-                </div>
+                <span className="text-[hsl(var(--logo-gold))] mt-0.5 flex-shrink-0 text-lg leading-none">&bull;</span>
+                <p className="text-muted-foreground leading-relaxed group-hover:text-foreground transition-colors duration-300">{item}</p>
               </motion.div>
             ))}
           </motion.div>
         </div>
       </section>
 
-      {/* Additionally Section */}
-      <section className="py-16 px-6 bg-secondary">
+      {/* 4. Our Legal Services Include */}
+      <section className="py-20 px-6">
+        <div className="container mx-auto max-w-4xl">
+          <motion.div {...fadeInUp} transition={{ duration: 0.8 }} className="text-center mb-12">
+            <h2 className="text-4xl font-light tracking-tight text-foreground">
+              {t.legalServices.title}
+            </h2>
+          </motion.div>
+          <motion.div
+            variants={staggerContainer}
+            initial="initial"
+            whileInView="whileInView"
+            viewport={{ once: true, margin: "-50px" }}
+            className="space-y-3"
+          >
+            {t.legalServices.items.map((item, index) => (
+              <motion.div
+                key={index}
+                variants={staggerItem}
+                transition={{ delay: index * 0.07, duration: 0.5 }}
+                className="flex gap-3 bg-card p-4 rounded-xl border border-border hover:shadow-md hover:border-primary/30 transition-all duration-300 group"
+              >
+                <span className="text-[hsl(var(--logo-gold))] mt-0.5 flex-shrink-0 text-lg leading-none">&bull;</span>
+                <p className="text-sm text-muted-foreground leading-relaxed group-hover:text-foreground transition-colors duration-300">{item}</p>
+              </motion.div>
+            ))}
+          </motion.div>
+        </div>
+      </section>
+
+      {/* 5. Why Choose Us? */}
+      <section className="py-20 px-6 bg-secondary">
+        <div className="container mx-auto max-w-4xl">
+          <motion.div {...fadeInUp} transition={{ duration: 0.8 }} className="text-center mb-12">
+            <h2 className="text-4xl font-light tracking-tight text-foreground">
+              {t.whyChooseUs.title}
+            </h2>
+          </motion.div>
+          <motion.div
+            variants={staggerContainer}
+            initial="initial"
+            whileInView="whileInView"
+            viewport={{ once: true, margin: "-50px" }}
+            className="space-y-4"
+          >
+            {t.whyChooseUs.items.map((item, index) => (
+              <motion.div
+                key={index}
+                variants={staggerItem}
+                transition={{ delay: index * 0.08, duration: 0.6 }}
+                className="flex gap-4 bg-background p-5 rounded-xl border border-border hover:shadow-md hover:border-primary/30 transition-all duration-300 group"
+              >
+                <div className="flex-shrink-0 w-8 h-8 rounded-full bg-foreground text-background flex items-center justify-center font-light text-sm group-hover:bg-primary transition-colors duration-300">
+                  {index + 1}
+                </div>
+                <p className="text-muted-foreground leading-relaxed group-hover:text-foreground transition-colors duration-300 pt-1">{item}</p>
+              </motion.div>
+            ))}
+          </motion.div>
+        </div>
+      </section>
+
+      {/* 6. Additionally */}
+      <section className="py-16 px-6">
         <div className="container mx-auto max-w-4xl">
           <motion.div {...fadeInUp} transition={{ duration: 0.8 }} className="text-center mb-10">
-            <h2 className="text-3xl font-light tracking-tight text-foreground mb-6">
+            <h2 className="text-3xl font-light tracking-tight text-foreground">
               {t.additionally.title}
             </h2>
           </motion.div>
@@ -329,7 +315,7 @@ const Index = () => {
                 key={index}
                 variants={staggerItem}
                 transition={{ delay: index * 0.15, duration: 0.6 }}
-                className="bg-background p-6 rounded-2xl border border-border hover:shadow-md transition-all duration-300"
+                className="bg-card p-6 rounded-2xl border border-border hover:shadow-md transition-all duration-300"
               >
                 <p className="text-muted-foreground leading-relaxed">{item}</p>
               </motion.div>
@@ -338,16 +324,13 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Contact Section */}
+      {/* 7. Contact Information */}
       <section id="contact" className="py-20 px-6 bg-secondary">
         <div className="container mx-auto max-w-4xl">
           <motion.div {...fadeInUp} transition={{ duration: 0.8 }} className="text-center mb-12">
-            <h2 className="text-4xl font-light tracking-tight text-foreground mb-6">
+            <h2 className="text-4xl font-light tracking-tight text-foreground">
               {t.contact.title}
             </h2>
-            <p className="text-base text-muted-foreground">
-              {t.contact.subtitle}
-            </p>
           </motion.div>
 
           <motion.div
