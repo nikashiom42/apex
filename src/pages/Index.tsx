@@ -309,6 +309,35 @@ const Index = () => {
         </div>
       </section>
 
+      {/* Additionally Section */}
+      <section className="py-16 px-6 bg-secondary">
+        <div className="container mx-auto max-w-4xl">
+          <motion.div {...fadeInUp} transition={{ duration: 0.8 }} className="text-center mb-10">
+            <h2 className="text-3xl font-light tracking-tight text-foreground mb-6">
+              {t.additionally.title}
+            </h2>
+          </motion.div>
+          <motion.div
+            variants={staggerContainer}
+            initial="initial"
+            whileInView="whileInView"
+            viewport={{ once: true, margin: "-50px" }}
+            className="space-y-6"
+          >
+            {t.additionally.items.map((item, index) => (
+              <motion.div
+                key={index}
+                variants={staggerItem}
+                transition={{ delay: index * 0.15, duration: 0.6 }}
+                className="bg-background p-6 rounded-2xl border border-border hover:shadow-md transition-all duration-300"
+              >
+                <p className="text-muted-foreground leading-relaxed">{item}</p>
+              </motion.div>
+            ))}
+          </motion.div>
+        </div>
+      </section>
+
       {/* Contact Section */}
       <section id="contact" className="py-20 px-6 bg-secondary">
         <div className="container mx-auto max-w-4xl">
