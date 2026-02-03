@@ -23,5 +23,32 @@
     <footer class="text-center text-xs text-gray-400 mt-8">
       <a href="https://digitalalchemy.ge/" target="_blank" rel="noopener">Website by Digital Alchemy</a>
     </footer>
+
+    <!-- Facebook Messenger Chat Plugin -->
+    <div id="fb-root"></div>
+    <div id="fb-customer-chat" class="fb-customerchat"
+      attribution="setup_tool"
+      page_id="886298781241889"
+      theme_color="#1a365d"
+      logged_in_greeting="გამარჯობა! როგორ შეგვიძლია დაგეხმაროთ?"
+      logged_out_greeting="გამარჯობა! როგორ შეგვიძლია დაგეხმაროთ?">
+    </div>
+
+    <script>
+      window.fbAsyncInit = function() {
+        FB.init({
+          xfbml: true,
+          version: 'v18.0'
+        });
+      };
+
+      (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = 'https://connect.facebook.net/ka_GE/sdk/xfbml.customerchat.js';
+        fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));
+    </script>
   </body>
 </html>
