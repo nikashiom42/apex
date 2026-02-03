@@ -181,6 +181,7 @@ export const translations: Translations = {
           label: "WhatsApp",
           value: "+995 579 142 582\n+995 579 267 355",
         },
+        { label: "Telegram", value: "+995 579 142 582" },
         { label: "Email", value: "legalexperts2023@gmail.com" },
         { label: "Facebook", value: "Georgia Legal Network" },
         { label: "Facebook", value: "Giorgi Zarnadze Law Firm" },
@@ -318,6 +319,7 @@ export const translations: Translations = {
           value: "+995 579 142 582\n+995 579 267 355",
         },
         { label: "WhatsApp", value: "+995 579 142 582\n+995 579 267 355" },
+        { label: "Telegram", value: "+995 579 142 582" },
         {
           label:
             "\u042d\u043b\u0435\u043a\u0442\u0440\u043e\u043d\u043d\u0430\u044f \u043f\u043e\u0447\u0442\u0430",

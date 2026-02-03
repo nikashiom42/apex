@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Phone, Mail, MapPin, Globe } from "lucide-react";
+import { Phone, Mail, MapPin, Globe, Send, MessageCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import LanguageSwitcher from "@/components/LanguageSwitcher";
 import { useLanguage } from "@/i18n/LanguageContext";
@@ -339,7 +339,7 @@ const Index = () => {
             className="grid md:grid-cols-3 gap-8 mb-12"
           >
             {t.contact.items.map((contact, index) => {
-              const icons = [Phone, Phone, Mail, Globe, Globe];
+              const icons = [Phone, MessageCircle, Send, Mail, Globe, Globe];
               const ContactIcon = icons[index];
               return (
                 <motion.div
@@ -405,38 +405,66 @@ const Index = () => {
       </footer>
 
       {/* Floating Chat Buttons */}
-      <div className="fixed bottom-6 right-6 z-50 flex flex-col gap-3">
-        <a
+      <motion.div
+        className="fixed bottom-6 right-6 z-50 flex flex-col items-end gap-3"
+        initial={{ opacity: 0, y: 40, scale: 0.8 }}
+        animate={{ opacity: 1, y: 0, scale: 1 }}
+        transition={{ delay: 1.5, duration: 0.5, ease: "easeOut" }}
+      >
+        {/* WhatsApp Button */}
+        <motion.a
           href="https://wa.me/995579142582"
           target="_blank"
           rel="noopener noreferrer"
           aria-label="Chat on WhatsApp"
-          className="w-12 h-12 rounded-full bg-[#25D366] text-white shadow-lg hover:shadow-xl transition-transform duration-200 hover:scale-105 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#25D366]/50"
+          className="group flex items-center gap-3"
+          initial={{ x: 20, opacity: 0 }}
+          animate={{ x: 0, opacity: 1 }}
+          transition={{ delay: 1.7, duration: 0.4 }}
+          whileHover={{ scale: 1.02 }}
+          whileTap={{ scale: 0.98 }}
         >
-          <span className="sr-only">WhatsApp</span>
-          <svg viewBox="0 0 32 32" className="w-6 h-6 mx-auto mt-3" aria-hidden="true">
-            <path
-              fill="currentColor"
-              d="M19.11 17.39c-.29-.14-1.74-.86-2.01-.96-.27-.1-.47-.14-.67.14-.2.29-.77.96-.95 1.16-.18.2-.35.22-.64.08-.29-.14-1.23-.45-2.34-1.43-.86-.77-1.44-1.72-1.61-2.01-.17-.29-.02-.45.12-.59.13-.13.29-.35.43-.52.14-.17.19-.29.29-.48.1-.19.05-.36-.02-.5-.07-.14-.67-1.6-.92-2.19-.24-.58-.49-.5-.67-.51-.17 0-.36-.01-.55-.01-.19 0-.5.07-.76.36-.26.29-1 1-1 2.44 0 1.44 1.02 2.83 1.16 3.02.14.19 2 3.05 4.85 4.28.68.29 1.21.46 1.62.59.68.22 1.3.19 1.79.12.55-.08 1.74-.71 1.98-1.39.24-.68.24-1.26.17-1.39-.07-.13-.26-.2-.55-.35zM16.04 27.2h-.01c-1.97 0-3.9-.53-5.59-1.53l-.4-.24-4.15 1.09 1.11-4.05-.26-.42a10.55 10.55 0 0 1-1.61-5.61c0-5.86 4.77-10.62 10.64-10.62 2.84 0 5.51 1.11 7.51 3.11a10.55 10.55 0 0 1 3.12 7.52c0 5.87-4.77 10.63-10.66 10.63zm0-22.01c-6.31 0-11.45 5.12-11.45 11.42 0 2.06.55 4.08 1.6 5.86L4.5 28.5l6.2-1.62a11.35 11.35 0 0 0 5.34 1.36h.01c6.31 0 11.45-5.12 11.45-11.43 0-3.05-1.19-5.92-3.35-8.08a11.38 11.38 0 0 0-8.1-3.34z"
-            />
-          </svg>
-        </a>
-        <a
+          <span className="hidden group-hover:block bg-foreground text-background text-xs font-medium px-3 py-1.5 rounded-lg shadow-lg whitespace-nowrap">
+            WhatsApp
+          </span>
+          <div className="relative w-14 h-14 rounded-2xl bg-gradient-to-br from-[#25D366] to-[#128C7E] text-white shadow-[0_4px_14px_rgba(37,211,102,0.4)] hover:shadow-[0_6px_20px_rgba(37,211,102,0.5)] transition-shadow duration-300 flex items-center justify-center overflow-hidden">
+            <div className="absolute inset-0 bg-white/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+            <svg viewBox="0 0 24 24" className="w-7 h-7 relative z-10" aria-hidden="true">
+              <path
+                fill="currentColor"
+                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.472-.149-.67.149-.198.297-.77.967-.943 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.521.149-.173.198-.298.298-.496.099-.198.05-.372-.025-.521-.074-.149-.67-1.611-.919-2.206-.242-.579-.487-.5-.67-.51-.173-.008-.372-.01-.57-.01-.198 0-.52.074-.793.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.876 1.213 3.074.149.198 2.095 3.2 5.076 4.487.709.306 1.262.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.29.173-1.413-.074-.124-.272-.198-.57-.347zM12.004 21.54c-1.77 0-3.513-.472-5.04-1.366l-.36-.213-3.553.932.947-3.464-.234-.356A8.372 8.372 0 0 1 3.64 12c0-4.635 3.772-8.41 8.404-8.41 2.247 0 4.357.876 5.945 2.464A8.37 8.37 0 0 1 20.36 12c0 4.635-3.772 8.41-8.356 8.41zm0-15.85c-4.145 0-7.516 3.373-7.516 7.52 0 1.36.366 2.687 1.06 3.84l.207.336-.556 2.034 2.089-.548.324.192a7.46 7.46 0 0 0 3.392.846h.004c4.145 0 7.516-3.373 7.516-7.52 0-2.01-.782-3.9-2.2-5.32a7.482 7.482 0 0 0-5.32-2.2z"
+              />
+            </svg>
+          </div>
+        </motion.a>
+
+        {/* Telegram Button */}
+        <motion.a
           href="https://t.me/+995579142582"
           target="_blank"
           rel="noopener noreferrer"
           aria-label="Chat on Telegram"
-          className="w-12 h-12 rounded-full bg-[#229ED9] text-white shadow-lg hover:shadow-xl transition-transform duration-200 hover:scale-105 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#229ED9]/50"
+          className="group flex items-center gap-3"
+          initial={{ x: 20, opacity: 0 }}
+          animate={{ x: 0, opacity: 1 }}
+          transition={{ delay: 1.85, duration: 0.4 }}
+          whileHover={{ scale: 1.02 }}
+          whileTap={{ scale: 0.98 }}
         >
-          <span className="sr-only">Telegram</span>
-          <svg viewBox="0 0 32 32" className="w-6 h-6 mx-auto mt-3" aria-hidden="true">
-            <path
-              fill="currentColor"
-              d="M28.55 6.6c.18-1.12-.94-1.73-1.95-1.36L3.82 14.1c-1.16.44-1.15 1.98.02 2.38l5.72 1.98 13.29-8.36c.63-.41 1.2.15.73.59L12.1 21.18l-.42 5.98c.61 0 .88-.28 1.2-.61l2.88-2.8 5.98 4.41c1.1.61 1.88.29 2.15-1.02L28.55 6.6z"
-            />
-          </svg>
-        </a>
-      </div>
+          <span className="hidden group-hover:block bg-foreground text-background text-xs font-medium px-3 py-1.5 rounded-lg shadow-lg whitespace-nowrap">
+            Telegram
+          </span>
+          <div className="relative w-14 h-14 rounded-2xl bg-gradient-to-br from-[#2AABEE] to-[#229ED9] text-white shadow-[0_4px_14px_rgba(34,158,217,0.4)] hover:shadow-[0_6px_20px_rgba(34,158,217,0.5)] transition-shadow duration-300 flex items-center justify-center overflow-hidden">
+            <div className="absolute inset-0 bg-white/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+            <svg viewBox="0 0 32 32" className="w-7 h-7 relative z-10" aria-hidden="true">
+              <path
+                fill="currentColor"
+                d="M28.55 6.6c.18-1.12-.94-1.73-1.95-1.36L3.82 14.1c-1.16.44-1.15 1.98.02 2.38l5.72 1.98 13.29-8.36c.63-.41 1.2.15.73.59L12.1 21.18l-.42 5.98c.61 0 .88-.28 1.2-.61l2.88-2.8 5.98 4.41c1.1.61 1.88.29 2.15-1.02L28.55 6.6z"
+              />
+            </svg>
+          </div>
+        </motion.a>
+      </motion.div>
     </div>
   );
 };
