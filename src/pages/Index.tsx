@@ -403,6 +403,40 @@ const Index = () => {
           </div>
         </div>
       </footer>
+
+      {/* Floating Chat Buttons */}
+      <div className="fixed bottom-6 right-6 z-50 flex flex-col gap-3">
+        <a
+          href="https://wa.me/995579142582"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Chat on WhatsApp"
+          className="w-12 h-12 rounded-full bg-[#25D366] text-white shadow-lg hover:shadow-xl transition-transform duration-200 hover:scale-105 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#25D366]/50"
+        >
+          <span className="sr-only">WhatsApp</span>
+          <svg viewBox="0 0 32 32" className="w-6 h-6 mx-auto mt-3" aria-hidden="true">
+            <path
+              fill="currentColor"
+              d="M19.11 17.39c-.29-.14-1.74-.86-2.01-.96-.27-.1-.47-.14-.67.14-.2.29-.77.96-.95 1.16-.18.2-.35.22-.64.08-.29-.14-1.23-.45-2.34-1.43-.86-.77-1.44-1.72-1.61-2.01-.17-.29-.02-.45.12-.59.13-.13.29-.35.43-.52.14-.17.19-.29.29-.48.1-.19.05-.36-.02-.5-.07-.14-.67-1.6-.92-2.19-.24-.58-.49-.5-.67-.51-.17 0-.36-.01-.55-.01-.19 0-.5.07-.76.36-.26.29-1 1-1 2.44 0 1.44 1.02 2.83 1.16 3.02.14.19 2 3.05 4.85 4.28.68.29 1.21.46 1.62.59.68.22 1.3.19 1.79.12.55-.08 1.74-.71 1.98-1.39.24-.68.24-1.26.17-1.39-.07-.13-.26-.2-.55-.35zM16.04 27.2h-.01c-1.97 0-3.9-.53-5.59-1.53l-.4-.24-4.15 1.09 1.11-4.05-.26-.42a10.55 10.55 0 0 1-1.61-5.61c0-5.86 4.77-10.62 10.64-10.62 2.84 0 5.51 1.11 7.51 3.11a10.55 10.55 0 0 1 3.12 7.52c0 5.87-4.77 10.63-10.66 10.63zm0-22.01c-6.31 0-11.45 5.12-11.45 11.42 0 2.06.55 4.08 1.6 5.86L4.5 28.5l6.2-1.62a11.35 11.35 0 0 0 5.34 1.36h.01c6.31 0 11.45-5.12 11.45-11.43 0-3.05-1.19-5.92-3.35-8.08a11.38 11.38 0 0 0-8.1-3.34z"
+            />
+          </svg>
+        </a>
+        <a
+          href="https://t.me/+995579142582"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Chat on Telegram"
+          className="w-12 h-12 rounded-full bg-[#229ED9] text-white shadow-lg hover:shadow-xl transition-transform duration-200 hover:scale-105 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#229ED9]/50"
+        >
+          <span className="sr-only">Telegram</span>
+          <svg viewBox="0 0 32 32" className="w-6 h-6 mx-auto mt-3" aria-hidden="true">
+            <path
+              fill="currentColor"
+              d="M28.55 6.6c.18-1.12-.94-1.73-1.95-1.36L3.82 14.1c-1.16.44-1.15 1.98.02 2.38l5.72 1.98 13.29-8.36c.63-.41 1.2.15.73.59L12.1 21.18l-.42 5.98c.61 0 .88-.28 1.2-.61l2.88-2.8 5.98 4.41c1.1.61 1.88.29 2.15-1.02L28.55 6.6z"
+            />
+          </svg>
+        </a>
+      </div>
     </div>
   );
 };
