@@ -3,6 +3,7 @@ import { Phone, Mail, MapPin, Globe, Send, MessageCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import LanguageSwitcher from "@/components/LanguageSwitcher";
 import { useLanguage } from "@/i18n/LanguageContext";
+import { trackEvent } from "@/lib/analytics";
 import logo from "@/assets/logo.jpg";
 import officeImg from "@/assets/office.jpg";
 
@@ -25,6 +26,19 @@ const staggerItem = {
 
 const Index = () => {
   const { t } = useLanguage();
+  const handleNavClick = (targetSection: string) => {
+    trackEvent("nav_click", {
+      target_section: targetSection,
+    });
+  };
+
+  const handleHeroCtaClick = () => {
+    trackEvent("cta_click", {
+      cta_name: "schedule_consultation",
+      cta_location: "hero",
+    });
+    document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" });
+  };
 
   return (
     <div className="min-h-screen bg-background overflow-x-hidden">
@@ -40,9 +54,9 @@ const Index = () => {
           />
           <div className="flex items-center gap-6">
             <nav className="hidden md:flex items-center gap-8">
-              <a href="#about" className="text-sm font-medium text-foreground hover:text-[hsl(var(--logo-gold))] transition-all duration-300 relative after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-[hsl(var(--logo-gold))] after:transition-all after:duration-300 hover:after:w-full">{t.nav.about}</a>
-              <a href="#services" className="text-sm font-medium text-foreground hover:text-[hsl(var(--logo-gold))] transition-all duration-300 relative after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-[hsl(var(--logo-gold))] after:transition-all after:duration-300 hover:after:w-full">{t.nav.services}</a>
-              <a href="#contact" className="text-sm font-medium text-foreground hover:text-[hsl(var(--logo-gold))] transition-all duration-300 relative after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-[hsl(var(--logo-gold))] after:transition-all after:duration-300 hover:after:w-full">{t.nav.contact}</a>
+              <a href="#about" onClick={() => handleNavClick("about")} className="text-sm font-medium text-foreground hover:text-[hsl(var(--logo-gold))] transition-all duration-300 relative after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-[hsl(var(--logo-gold))] after:transition-all after:duration-300 hover:after:w-full">{t.nav.about}</a>
+              <a href="#services" onClick={() => handleNavClick("services")} className="text-sm font-medium text-foreground hover:text-[hsl(var(--logo-gold))] transition-all duration-300 relative after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-[hsl(var(--logo-gold))] after:transition-all after:duration-300 hover:after:w-full">{t.nav.services}</a>
+              <a href="#contact" onClick={() => handleNavClick("contact")} className="text-sm font-medium text-foreground hover:text-[hsl(var(--logo-gold))] transition-all duration-300 relative after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-[hsl(var(--logo-gold))] after:transition-all after:duration-300 hover:after:w-full">{t.nav.contact}</a>
             </nav>
             <LanguageSwitcher />
           </div>
@@ -104,7 +118,7 @@ const Index = () => {
                 <Button
                   size="lg"
                   className="text-base px-8 py-6 rounded-full hover:scale-105 transition-transform duration-300 shadow-lg hover:shadow-xl"
-                  onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
+                  onClick={handleHeroCtaClick}
                 >
                   {t.hero.cta}
                 </Button>
@@ -345,6 +359,12 @@ const Index = () => {
                 <motion.div
                   key={index}
                   className="text-center p-8 bg-background rounded-2xl hover:shadow-lg hover:scale-105 transition-all duration-300 group cursor-pointer"
+                  onClick={() => {
+                    trackEvent("contact_card_click", {
+                      contact_label: contact.label,
+                      contact_index: index + 1,
+                    });
+                  }}
                   whileHover={{ y: -5 }}
                   initial={{ opacity: 0, y: 40 }}
                   whileInView={{ opacity: 1, y: 0 }}
@@ -371,6 +391,12 @@ const Index = () => {
                 <motion.div
                   key={index}
                   className="p-6 bg-background rounded-2xl hover:shadow-lg transition-all duration-300 group cursor-pointer"
+                  onClick={() => {
+                    trackEvent("address_card_click", {
+                      city: addr.city,
+                      address_index: index + 1,
+                    });
+                  }}
                   whileHover={{ y: -3 }}
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
@@ -397,7 +423,7 @@ const Index = () => {
                 {t.footer.copyright}
               </p>
               <p className="text-xs text-muted-foreground">
-                {t.footer.websiteBy} <a href="https://digitalalchemy.ge/" target="_blank" rel="noopener noreferrer" className="hover:text-foreground transition-colors">Digital Alchemy</a>
+                {t.footer.websiteBy} <a href="https://digitalalchemy.ge/" target="_blank" rel="noopener noreferrer" className="hover:text-foreground transition-colors" onClick={() => trackEvent("outbound_click", { destination: "digitalalchemy.ge", location: "footer" })}>Digital Alchemy</a>
               </p>
             </div>
           </div>
@@ -417,6 +443,7 @@ const Index = () => {
           target="_blank"
           rel="noopener noreferrer"
           aria-label="Chat on WhatsApp"
+          onClick={() => trackEvent("contact_click", { channel: "whatsapp", contact_id: "995579142582" })}
           className="group flex items-center gap-3"
           initial={{ x: 20, opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
@@ -444,6 +471,7 @@ const Index = () => {
           target="_blank"
           rel="noopener noreferrer"
           aria-label="Chat on WhatsApp +995 579 267 355"
+          onClick={() => trackEvent("contact_click", { channel: "whatsapp", contact_id: "995579267355" })}
           className="group flex items-center gap-3"
           initial={{ x: 20, opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
@@ -471,6 +499,7 @@ const Index = () => {
           target="_blank"
           rel="noopener noreferrer"
           aria-label="Chat on Telegram"
+          onClick={() => trackEvent("contact_click", { channel: "telegram", contact_id: "995579142582" })}
           className="group flex items-center gap-3"
           initial={{ x: 20, opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
